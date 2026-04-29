@@ -48,6 +48,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/illustrations': RouteRecordInfo<
+      '/illustrations',
+      '/illustrations',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/media': RouteRecordInfo<
       '/media',
       '/media',
@@ -132,6 +139,12 @@ declare module 'vue-router/auto-routes' {
     'pages/bookmarks.md': {
       routes:
         | '/bookmarks'
+      views:
+        | never
+    }
+    'pages/illustrations.md': {
+      routes:
+        | '/illustrations'
       views:
         | never
     }
