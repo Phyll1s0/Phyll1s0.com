@@ -34,7 +34,7 @@ export default defineConfig({
       { find: '~/', replacement: `${resolve(__dirname, 'src')}/` },
     ],
   },
-  base: '/Phyll1s0.space/',
+  base: '/',
   optimizeDeps: {
     include: [
       'vue',
@@ -179,7 +179,7 @@ export default defineConfig({
               ? fs.copy(`${id.slice(0, -3)}.png`, `public/${path}`)
               : generateOg(frontmatter.title!.replace(/\s-\s.*$/, '').trim(), `public/${path}`),
           )
-          frontmatter.image = `https://phyll1s0.github.io/Phyll1s0.space/${path}`
+          frontmatter.image = `https://phyll1s0.com/${path}`
         })()
         const head = defaults(frontmatter, options)
         return { head, frontmatter }
