@@ -9,13 +9,24 @@ defineProps<{
 }>()
 
 const selectedPhoto = ref<Photo | null>(null)
+const isLoading = ref(false)
+const isLoaded = ref(false)
 
 function openPhoto(photo: Photo) {
   selectedPhoto.value = photo
+  isLoading.value = true
+  isLoaded.value = false
 }
 
 function closePhoto() {
   selectedPhoto.value = null
+  isLoading.value = false
+  isLoaded.value = false
+}
+
+function onImageLoad() {
+  isLoading.value = false
+  isLoaded.value = true
 }
 </script>
 
@@ -36,11 +47,20 @@ function closePhoto() {
 
   <!-- 大图弹窗 -->
   <div v-if="selectedPhoto" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90" @click="closePhoto">
+    <!-- 加载中 -->
+    <div v-if="isLoading" class="text-white text-xl">
+      Loading...
+    </div>
+
+    <!-- 高清图 -->
     <img
+      v-show="isLoaded"
       :src="selectedPhoto.url"
       :alt="selectedPhoto.text"
       class="max-w-[90vw] max-h-[90vh] object-contain"
+      @load="onImageLoad"
     >
+
     <button class="absolute top-4 right-4 text-white text-2xl" @click="closePhoto">
       ✕
     </button>
