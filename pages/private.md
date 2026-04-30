@@ -25,27 +25,23 @@ function checkPassword() {
 </script>
 
 <div v-if="!unlocked" class="prose m-auto mb-8 flex flex-col items-center justify-center min-h-[40vh] gap-4 slide-enter">
-  <div i-ri-lock-line text-4xl op50 />
-  <h1 class="text-2xl font-bold">Private</h1>
-  <p class="op50">Enter password to access private posts</p>
-
   <div class="flex gap-2">
     <input
       v-model="password"
       type="password"
-      placeholder="Password..."
+      placeholder="Password"
       class="px-4 py-2 rounded border dark:border-gray-700 bg-transparent"
       @keyup.enter="checkPassword"
     />
     <button
       @click="checkPassword"
-      class="px-4 py-2 rounded bg-green-500 text-white hover:bg-green-600"
+      class="px-4 py-2 rounded border dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
     >
       Unlock
     </button>
   </div>
 
-  <p v-if="error" class="text-red-500">Wrong password, try again</p>
+  <p v-if="error" class="text-red-500 text-sm">Wrong password</p>
 </div>
 
 <div v-else class="prose m-auto">
