@@ -52,12 +52,12 @@ function onImageLoad() {
       Loading...
     </div>
 
-    <!-- 高清图 -->
+    <!-- 高清图（直接显示，加载完成后淡入） -->
     <img
-      v-show="isLoaded"
       :src="selectedPhoto.url"
       :alt="selectedPhoto.text"
-      class="max-w-[90vw] max-h-[90vh] object-contain"
+      class="max-w-[90vw] max-h-[90vh] object-contain transition-opacity duration-300"
+      :class="isLoaded ? 'opacity-100' : 'opacity-0'"
       @load="onImageLoad"
     >
 
