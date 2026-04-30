@@ -7,20 +7,35 @@ art: plum
 <SubNav />
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const password = ref('')
 const unlocked = ref(false)
 const error = ref(false)
 
+// 检查是否已解锁
+onMounted(() => {
+  const isUnlocked = localStorage.getItem('private-unlocked')
+  if (isUnlocked === 'true') {
+    unlocked.value = true
+  }
+})
+
 function checkPassword() {
   if (password.value === '20051021') {
     unlocked.value = true
     error.value = false
+    localStorage.setItem('private-unlocked', 'true') // 记住解锁状态
   } else {
     error.value = true
     password.value = ''
   }
+}
+
+// 可选：添加登出功能
+function lock() {
+  unlocked.value = false
+  localStorage.removeItem('private-unlocked')
 }
 </script>
 
@@ -45,7 +60,16 @@ function checkPassword() {
 </div>
 
 <div v-else class="prose m-auto">
-  <h2 class="mb-8 slide-enter-50">Private Posts</h2>
+  <div class="flex justify-between items-center mb-8">
+    <h2 class="slide-enter-50">Private Posts</h2>
+    <button
+      @click="lock"
+      class="text-sm op50 hover:op100 transition"
+      title="Lock private area"
+    >
+      <span i-ri-lock-line /> Lock
+    </button>
+  </div>
 
   <div class="grid gap-4">
     <RouterLink to="/posts/private-diary" class="item block font-normal mb-6 mt-2 no-underline slide-enter">
