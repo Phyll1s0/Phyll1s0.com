@@ -23,9 +23,9 @@ const metaInfo = Object.entries(
   }
 })
 
-// 获取所有图片（排除缩略图）
+// 获取所有图片（排除缩略图，只保留 webp）
 const allImages = Object.entries(
-  import.meta.glob<string>('./**/*.{jpg,png,webp,JPG,PNG,WEBP}', {
+  import.meta.glob<string>('./**/*.webp', {
     eager: true,
     query: '?url',
     import: 'default',
