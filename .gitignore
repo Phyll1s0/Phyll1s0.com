@@ -10,7 +10,9 @@ components.d.ts
 auto-imports.d.ts
 temp
 sponsors.*
-drafts
+# drafts
+# 注释掉以包含草稿目录
+# drafts
 *.log
 src/data/sponsors-circles.json
 public/assets/fonts
