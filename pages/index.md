@@ -9,7 +9,7 @@ Hey! I'm Hao Lou (Chinese: 楼灏, nickname: phyll1s0/凌灰音), an undergradua
 
 I'm deeply passionate about exploring innovative technologies and building creative projects that push boundaries. From systems programming to AI experiments and game development, I love turning ideas into working code and constantly expanding my toolkit to bring concepts to life.
 
-Outside of code, I enjoy sports, gaming, creative arts, traveling, and contemplating philosophical questions. Always chasing that balance between building things and living life.
+Outside of code, I enjoy sports, gaming, creative arts, traveling, and contemplating philosophical questions. We are what we repeatedly do. In the tension between creation and existence, I find my own path.
 
 You can find my full projects list [here](https://github.com/Phyll1s0?tab=repositories).
 
