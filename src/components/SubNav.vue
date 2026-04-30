@@ -25,6 +25,9 @@ const route = useRoute()
       <RouterLink to="/notes" class="!border-none" :class="route.path === '/notes' ? activeStyle : inactiveStyle">
         Notes
       </RouterLink>
+      <RouterLink to="/private" class="!border-none" :class="route.path === '/private' ? activeStyle : inactiveStyle">
+        Private 🔒
+      </RouterLink>
     </div>
   </div>
 </template>
