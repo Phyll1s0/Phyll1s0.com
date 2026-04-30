@@ -1,7 +1,10 @@
 ---
 title: Private
-layout: full-width
+display: ''
+art: plum
 ---
+
+<SubNav />
 
 <script setup>
 import { ref } from 'vue'
@@ -21,10 +24,10 @@ function checkPassword() {
 }
 </script>
 
-<div v-if="!unlocked" class="flex flex-col items-center justify-center min-h-[50vh] gap-4">
+<div v-if="!unlocked" class="prose m-auto mb-8 flex flex-col items-center justify-center min-h-[40vh] gap-4 slide-enter">
   <div i-ri-lock-line text-4xl op50 />
-  <h2 class="text-xl font-bold">Private Area</h2>
-  <p class="text-sm op50">Enter password to access private posts</p>
+  <h1 class="text-2xl font-bold">Private</h1>
+  <p class="op50">Enter password to access private posts</p>
 
   <div class="flex gap-2">
     <input
@@ -42,16 +45,22 @@ function checkPassword() {
     </button>
   </div>
 
-  <p v-if="error" class="text-red-500 text-sm">Wrong password, try again</p>
+  <p v-if="error" class="text-red-500">Wrong password, try again</p>
 </div>
 
-<div v-else>
-  <h1 class="text-2xl font-bold mb-8">Private Posts</h1>
+<div v-else class="prose m-auto">
+  <h2 class="mb-8 slide-enter-50">Private Posts</h2>
 
   <div class="grid gap-4">
-    <a href="/posts/private-diary" class="block p-4 rounded border dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
-      <h3 class="font-bold">私人日记</h3>
-      <p class="text-sm op50">2026-04-30</p>
-    </a>
+    <RouterLink to="/posts/private-diary" class="item block font-normal mb-6 mt-2 no-underline slide-enter">
+      <li class="no-underline" flex="~ col md:row gap-2 md:items-center">
+        <div class="title text-lg leading-1.2em">
+          <span>私人日记</span>
+        </div>
+        <div flex="~ gap-2 items-center">
+          <span text-sm op50 ws-nowrap>2026-04-30</span>
+        </div>
+      </li>
+    </RouterLink>
   </div>
 </div>
