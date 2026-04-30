@@ -26,7 +26,7 @@ const route = useRoute()
         Notes
       </RouterLink>
       <RouterLink to="/private" class="!border-none" :class="route.path === '/private' ? activeStyle : inactiveStyle">
-        Private 🔒
+        Private
       </RouterLink>
     </div>
   </div>

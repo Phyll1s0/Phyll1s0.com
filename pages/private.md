@@ -60,14 +60,13 @@ function lock() {
 </div>
 
 <div v-else class="prose m-auto">
-  <div class="flex justify-between items-center mb-8">
-    <h2 class="slide-enter-50">Private Posts</h2>
+  <div class="flex justify-end mb-8">
     <button
       @click="lock"
       class="text-sm op50 hover:op100 transition"
       title="Lock private area"
     >
-      <span i-ri-lock-line /> Lock
+      Lock
     </button>
   </div>
 
