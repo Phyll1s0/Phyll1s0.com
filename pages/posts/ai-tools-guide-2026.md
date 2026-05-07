@@ -1,154 +1,121 @@
 ---
-title: My AI Toolkit: 2026 Model Selection & Usage Guide
+title: My AI Toolkit: A CS Student's Practical Guide
 date: 2026-05-07
 type: blog
 ---
 
-# My AI Toolkit: 2026 Model Selection & Usage Guide
+# My AI Toolkit: A CS Student's Practical Guide
 
-> As a CS student, AI tools have become essential assistants for my daily learning, coding, and content creation. This article summarizes my current AI tool stack and thoughts on model selection.
-
----
-
-## 1. Q&A Models: Daily Learning & Knowledge Acquisition
-
-### Primary Recommendation: Gemini 2.5 Pro
-
-**Why Gemini?**
-
-Gemini 2.5 Pro is my go-to for daily Q&A. Its strengths:
-
-- **Ultra-long context**: Supports 1M+ token context window, can process entire books, codebases, or long papers at once
-- **Multimodal understanding**: Not just text, but images, charts, even video content
-- **Google ecosystem integration**: Seamless with Google Search, Gmail, Docs
-
-**Use cases:**
-
-- Quick extraction of core ideas from papers
-- Organizing course notes, generating mind maps
-- Cross-disciplinary queries (e.g., "Explain Transformer in simple terms")
-
-**Benchmark Performance:**
-
-| Benchmark         | Gemini 2.5 Pro | GPT-4o | Claude 3.5 Sonnet |
-| :---------------- | :------------- | :----- | :---------------- |
-| MMLU (Knowledge)  | 89.7%          | 88.7%  | 88.5%             |
-| MMMU (Multimodal) | 75.0%          | 69.1%  | 68.3%             |
-| HumanEval (Code)  | 85.7%          | 90.2%  | 92.0%             |
-
-> Data sources: Official technical reports from vendors and LMSYS Arena public data
+> After months of daily use, I've settled on a multi-model workflow that covers all my needs without breaking the bank. Here's what actually works for me as a CS student at SJTU.
 
 ---
 
-## 2. Code Agents: Programming Assistant Selection
+## Daily Q&A: Gemini Plus ($8/month)
 
-### Tier 1: Claude Code + GPT-5.5
+I pay $8 per month for Gemini Plus and it's my go-to for almost everything. The context window is massive — I can dump an entire research paper or a 500-line code file and ask specific questions without losing coherence. The multimodal support is genuinely useful too; I often screenshot lecture slides or diagrams and ask Gemini to explain or summarize them.
 
-**Claude Code**
+Compared to the free tier, Plus gives me significantly higher rate limits and access to the latest model updates. At $8, it's cheaper than a meal on campus, and I use it dozens of times per day.
 
-Claude Code is currently one of the strongest coding agents, especially for:
+**What I use it for:**
 
-- **Deep code understanding**: Handles complex codebases, understands project architecture
-- **Refactoring capability**: Considers contextual dependencies when refactoring
-- **Debug accuracy**: High precision in bug localization
-
-**⚠️ Warning: Account Ban Risk**
-
-Claude has strict account风控, especially for:
-
-- Frequent IP switching
-- Shared accounts
-- High-volume automated requests
-
-**Recommendation**: If stability is priority, consider GPT Plus/Pro with lower ban risk.
-
-**GPT-5.5 (Code Interpreter)**
-
-OpenAI's coding capability remains top-tier:
-
-- **Rich tool calling**: File I/O, data analysis, chart generation
-- **High stability**: Reliable API for production use
-- **Mature ecosystem**: Deep integration with GitHub Copilot, VS Code
-
-### Budget Limited? Copilot Pro is the Best Value
-
-If your monthly budget is under $20:
-
-- **GitHub Copilot Pro** ($19/month): Best code completion, ideal for daily coding
-- **ChatGPT Plus** ($20/month): Strong general capability, decent coding too
-- Choose Copilot Pro if you code more frequently
+- Understanding complex concepts from papers ("Explain the attention mechanism in this Transformer paper")
+- Drafting and refining emails or documentation
+- Quick fact-checking during assignments
+- Brainstorming project ideas
 
 ---
 
-## 3. API Selection: Official vs. Domestic Proxies
+## Coding: GitHub Copilot (Free via Student Pack)
 
-### Official Channels
+Every CS student should get the GitHub Student Developer Pack. Copilot is included for free, and it's genuinely transformative for daily coding. The inline suggestions save me from typing boilerplate, and the chat interface (Copilot Chat) is surprisingly good at explaining legacy code or suggesting refactors.
 
-**For**: Those seeking stability with overseas payment capability
+I pair Copilot with VS Code and it feels like having a pair programmer who never gets tired. It's not perfect — sometimes it suggests outdated patterns — but for the price (free), it's unbeatable.
 
-- **OpenAI API**: Most mature, comprehensive docs, rich ecosystem
-- **Google AI Studio**: Generous free tier for Gemini API
-- **Anthropic API**: Official Claude, but strict风控
-
-### Domestic Models: Cost-Effective Options
-
-**Kimi 2.6 (Moonshot)**
-
-- **Price advantage**: ¥200 package, splittable among friends, student-friendly
-- **Long text strength**: Supports 2M character context
-- **Monthly subscription recommended**: Domestic models upgrade fast, buy latest
-
-**DeepSeek V4 Pro**
-
-- **Current性价比之王**: 2.5折 pricing (until end of May)
-- **Surprising performance**: Near top-tier on multiple benchmarks
-- **Great for experimenting**: Low cost to try premium models
-
-**Benchmark Comparison (Domestic Models):**
-
-| Model           | MMLU  | C-Eval (Chinese) | Price (per 1M tokens) |
-| :-------------- | :---- | :--------------- | :-------------------- |
-| DeepSeek V4 Pro | 87.2% | 91.5%            | ¥0.5 (2.5折)          |
-| Kimi 2.6        | 85.8% | 89.2%            | ¥1.2                  |
-| GPT-4o          | 88.7% | 86.1%            | $5.0                  |
-
-> Prices as of May 2026, subject to official updates
+**Pro tip:** Apply for the GitHub Student Pack with your .edu email. Approval usually takes a few days.
 
 ---
 
-## 4. My Personal Tool Stack
+## Advanced Coding & Agents: GPT-Pro via Friend's Account ($200/month, shared)
 
-**Daily Q&A**: Gemini 2.5 Pro (free tier sufficient)
-**Development**: Claude Code + Copilot Pro (double insurance)
-**Paper Reading**: Gemini + Kimi (complementary long-text capabilities)
-**API Calls**: DeepSeek V4 Pro (best性价比)
+For heavy lifting — especially complex refactoring, debugging legacy codebases, or building features from scratch — I use GPT-Pro through a friend's account. The $200/month price is steep for a student, but split among a few people it's manageable.
+
+The Codex agent mode is the standout feature here. I can describe a feature in natural language, and it will plan, write, test, and iterate on the implementation. It's not magic — you still need to review and correct — but it cuts development time dramatically for greenfield projects.
+
+**When I use it:**
+
+- Building side projects from scratch
+- Understanding large, unfamiliar codebases
+- Complex debugging sessions where I need to trace through multiple files
+
+**The catch:** Account sharing violates OpenAI's terms, and there's always a risk of bans. If you're risk-averse, stick to Copilot Pro ($19/month) or Gemini's coding features.
 
 ---
 
-## 5. Selection Advice Summary
+## Long Context & Chinese Content: Kimi 2.6 (¥100/month, split)
 
-| Need               | Recommendation        | Budget                  |
-| :----------------- | :-------------------- | :---------------------- |
-| Daily Q&A          | Gemini 2.5 Pro        | Free                    |
-| Stable Coding      | GPT-5.5 / Copilot Pro | $20/month               |
-| Deep Code          | Claude Code           | $20/month (ban risk)    |
-| Long Text          | Kimi 2.6              | ¥200/month (splittable) |
-| Cost-effective API | DeepSeek V4 Pro       | ¥0.5/1M tokens          |
+I split a ¥200/month Kimi 2.6 subscription with a classmate, so my cost is ¥100. The killer feature here is the context length — Kimi handles extremely long documents better than anything else I've tried. I regularly feed it entire textbooks or 100+ page technical manuals and ask for summaries or specific information extraction.
+
+The API access is a nice bonus. I use the API key for automated workflows — like batch-processing lecture transcripts or generating flashcards from notes.
+
+**Why not just use Gemini?** Gemini is great for general Q&A, but Kimi has better support for Chinese academic content and certain formatting quirks in Chinese documents. I use both, but Kimi wins for thesis-related work and Chinese-language materials.
+
+---
+
+## What's Next: DeepSeek V4
+
+My Kimi subscription ends this month, and I'm planning to try DeepSeek V4. The pricing is aggressively cheap — reportedly ¥0.5 per million tokens during the promotional period — and early reviews suggest it punches above its weight class.
+
+I'm particularly interested in their reasoning model. If the benchmarks hold up in real-world use, DeepSeek could replace both Gemini Plus and Kimi for a fraction of the cost. I'll report back after a month of use.
+
+---
+
+## My Actual Monthly Costs
+
+| Tool           | Cost            | Notes                         |
+| :------------- | :-------------- | :---------------------------- |
+| Gemini Plus    | $8              | Personal subscription         |
+| GitHub Copilot | $0              | Student pack                  |
+| GPT-Pro        | ~$50            | Friend's account, shared cost |
+| Kimi 2.6       | ¥100            | Split with classmate          |
+| **Total**      | **~$65 + ¥100** |                               |
+
+This is roughly the cost of two textbooks per month. For the time saved on debugging, research, and writing, it's an easy tradeoff.
+
+---
+
+## Recommendations by Budget
+
+**Zero budget:**
+
+- GitHub Copilot (student free) + Gemini free tier
+- You lose advanced features but can still code effectively and get decent Q&A
+
+**$10-20/month:**
+
+- Gemini Plus ($8) + Copilot free
+- Covers 90% of student needs
+
+**$50-100/month:**
+
+- Add Kimi or a shared GPT-Pro access
+- Worth it if you're doing research-heavy work or complex projects
+
+**$200+/month:**
+
+- Your own GPT-Pro or multiple premium subscriptions
+- Only justified if you're building a startup or doing graduate-level research
 
 ---
 
 ## Final Thoughts
 
-AI tools evolve rapidly. My advice:
+The AI landscape changes monthly. My advice: don't overcommit to annual subscriptions. I review my toolkit every semester and adjust based on what I'm actually using.
 
-1. **Don't lock into one model**: Different tasks, different tools
-2. **Watch性价比**: Students prioritize free/low-cost options
-3. **Monthly subscriptions**: Models upgrade fast, stay flexible
-4. **Experiment**: Try new models when they launch before committing
+The best tool is the one you'll actually use daily. For me, that's Gemini Plus for quick questions and Copilot for coding. Everything else is situational.
 
-> _"Tools are means, solving problems is the goal. Pick what fits you best, not what's most expensive."_
+> _"Don't chase the newest model. Chase the workflow that makes you productive."_
 
 ---
 
 _Author: Phyllis (音音)_
-_Updated: 2026-05-07_
+_Last updated: May 2026_
