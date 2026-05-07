@@ -8,13 +8,13 @@ type: page
 
 Choose your favorite logo style:
 
-## Option 1: Cat 🐱
+## Option 1: Cat 🐱 (Minimal)
 
 <div class="logo-preview">
   <LogoCat />
 </div>
 
-## Option 2: Ski ⛷️
+## Option 2: Ski ⛷️ (Minimal)
 
 <div class="logo-preview">
   <LogoSki />
@@ -32,6 +32,18 @@ Choose your favorite logo style:
   <LogoZero />
 </div>
 
+## Option 5: Phyllis0 (Handwriting Style) ✨ NEW
+
+<div class="logo-preview-wide">
+  <LogoPhyllis />
+</div>
+
+## Option 6: Ski V2 (Dynamic) ✨ NEW
+
+<div class="logo-preview">
+  <LogoSkiV2 />
+</div>
+
 ---
 
 **Which one do you prefer?**
@@ -39,6 +51,11 @@ Choose your favorite logo style:
 <style>
 .logo-preview {
   width: 100px;
+  height: 100px;
+  margin: 20px 0;
+}
+.logo-preview-wide {
+  width: 200px;
   height: 100px;
   margin: 20px 0;
 }
