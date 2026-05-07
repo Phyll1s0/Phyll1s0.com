@@ -39,9 +39,9 @@ function scanPages(dir, basePath = '') {
     } else if (item.endsWith('.md')) {
       const content = fs.readFileSync(fullPath, 'utf-8')
       const data = parseFrontmatter(content)
+      const routePath = path.join(basePath, item.replace('.md', ''))
 
-      if (data.title) {
-        const routePath = path.join(basePath, item.replace('.md', ''))
+      if (data.title && !routePath.includes('private')) {
         results.push({
           title: data.title,
           path: '/' + routePath.replace(/\\/g, '/'),

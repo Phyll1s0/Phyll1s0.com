@@ -4,11 +4,6 @@
     "path": "/bookmarks"
   },
   {
-    "title": "Private Thoughts",
-    "path": "/drafts/private-thoughts",
-    "date": "2026-04-30T00:00:00.000Z"
-  },
-  {
     "title": "Illustrations",
     "path": "/illustrations"
   },
@@ -31,26 +26,17 @@
   {
     "title": "My AI Toolkit - A CS Student's Practical Guide",
     "path": "/posts/ai-tools-guide-2026",
-    "date": "2026-05-07T00:00:00.000Z",
+    "date": "2026-05-07",
     "type": "blog"
   },
   {
     "title": "Hello World — My New Blog",
     "path": "/posts/hello-world",
-    "date": "2026-04-22T00:00:00.000Z"
+    "date": "2026-04-22"
   },
   {
     "title": "Blog - Hao Lou",
     "path": "/posts/index"
-  },
-  {
-    "title": "私人日记",
-    "path": "/posts/private-diary",
-    "date": "2026-04-30T00:00:00.000Z"
-  },
-  {
-    "title": "Private",
-    "path": "/private"
   },
   {
     "title": "Projects",
