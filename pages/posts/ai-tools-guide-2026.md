@@ -32,11 +32,13 @@ Takes a couple days to get approved. Every CS student should grab this.
 
 ---
 
-## Big Projects: GPT-Pro (Borrowed from a Friend)
+## Big Projects: GPT-Pro with GPT-5.5 (Borrowed from a Friend)
 
 This one's interesting because I'm not paying for it. My friend competed at ICPC World Finals last year and OpenAI gives every finalist a free year of GPT-Pro. So I'm basically leeching off his account.
 
-The Codex agent mode is actually insane. I can say "build me a file upload and auto-categorization feature" and it will plan, write, test, and iterate until it works. Still needs my review and bug fixes, but the time saved from starting from scratch is massive.
+The model I'm using is GPT-5.5, and honestly, it's kind of insane. The "extra high" reasoning mode is the real deal—it handles complex architecture decisions, debugging across multiple files, and refactoring legacy code like it's nothing. I can say "build me a file upload and auto-categorization feature" and it will plan, write, test, and iterate until it works.
+
+Still needs my review and bug fixes, but the time saved from starting from scratch is massive. GPT-5.5 feels like a genuine step up from previous versions—it's not just faster, it actually understands the bigger picture better.
 
 Account sharing is against ToS though, so there's always a ban risk. If you don't have a friend with free Pro, Copilot Pro or Gemini's coding features are solid alternatives.
 
