@@ -35,6 +35,7 @@ export default defineConfig({
     ],
   },
   base: '/',
+  assetsInclude: ['**/*.webp'],
   optimizeDeps: {
     include: [
       'vue',

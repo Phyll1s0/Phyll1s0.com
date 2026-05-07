@@ -48,6 +48,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/drafts/private-thoughts': RouteRecordInfo<
+      '/drafts/private-thoughts',
+      '/drafts/private-thoughts',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/illustrations': RouteRecordInfo<
       '/illustrations',
       '/illustrations',
@@ -83,9 +90,30 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/posts/ai-tools-guide-2026': RouteRecordInfo<
+      '/posts/ai-tools-guide-2026',
+      '/posts/ai-tools-guide-2026',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/posts/hello-world': RouteRecordInfo<
       '/posts/hello-world',
       '/posts/hello-world',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/private-diary': RouteRecordInfo<
+      '/posts/private-diary',
+      '/posts/private-diary',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/private': RouteRecordInfo<
+      '/private',
+      '/private',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -142,6 +170,12 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
+    'pages/drafts/private-thoughts.md': {
+      routes:
+        | '/drafts/private-thoughts'
+      views:
+        | never
+    }
     'pages/illustrations.md': {
       routes:
         | '/illustrations'
@@ -172,9 +206,27 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
+    'pages/posts/ai-tools-guide-2026.md': {
+      routes:
+        | '/posts/ai-tools-guide-2026'
+      views:
+        | never
+    }
     'pages/posts/hello-world.md': {
       routes:
         | '/posts/hello-world'
+      views:
+        | never
+    }
+    'pages/posts/private-diary.md': {
+      routes:
+        | '/posts/private-diary'
+      views:
+        | never
+    }
+    'pages/private.md': {
+      routes:
+        | '/private'
       views:
         | never
     }
