@@ -5,6 +5,8 @@ type: blog
 tocAlwaysOn: true
 ---
 
+[[toc]]
+
 Honestly, six months ago I was still in the "AI tools are overhyped" camp. Now I'm spending more on AI subscriptions than on bubble tea, and weirdly enough, it feels worth it.
 
 This isn't one of those "you MUST use these tools" posts. Just documenting my current workflow and the mistakes I've made along the way.

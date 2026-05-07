@@ -288,6 +288,10 @@ h6:focus .header-anchor {
 }
 
 /* Heading weights */
+.prose h1 {
+  font-weight: 600;
+}
+
 .prose h2 {
   font-weight: 500;
 }
