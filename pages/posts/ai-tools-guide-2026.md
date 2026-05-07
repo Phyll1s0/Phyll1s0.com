@@ -35,9 +35,9 @@ I pair Copilot with VS Code and it feels like having a pair programmer who never
 
 ---
 
-## Advanced Coding & Agents: GPT-Pro via Friend's Account ($200/month, shared)
+## Advanced Coding & Agents: GPT-Pro (Free via Friend's ICPC Win)
 
-For heavy lifting — especially complex refactoring, debugging legacy codebases, or building features from scratch — I use GPT-Pro through a friend's account. The $200/month price is steep for a student, but split among a few people it's manageable.
+For heavy lifting — especially complex refactoring, debugging legacy codebases, or building features from scratch — I use GPT-Pro through a friend's account. He got it for free by competing at ICPC World Finals (OpenAI gives every finalist a free year), so my cost is literally zero.
 
 The Codex agent mode is the standout feature here. I can describe a feature in natural language, and it will plan, write, test, and iterate on the implementation. It's not magic — you still need to review and correct — but it cuts development time dramatically for greenfield projects.
 
@@ -82,7 +82,7 @@ When Gemini Pro first launched last July, Google offered free Pro access to veri
 ### GPT-Pro — The Competition Route
 
 **Method 1: ICPC World Finals**
-If you compete at ICPC World Finals, OpenAI gives every finalist a free year of GPT-Pro. No strings attached. This is how I got my first taste of Pro-level access — and why I'm now splitting a paid account with friends. If you're competitive programming-oriented, train hard and aim for finals.
+If you compete at ICPC World Finals, OpenAI gives every finalist a free year of GPT-Pro. No strings attached. This is how my friend got his account — and why I get to use it for free. If you're competitive programming-oriented, train hard and aim for finals.
 
 **Method 2: Open Source Contributions**
 Significant contributors to major open-source projects can apply for free API credits or Pro access. OpenAI, Google, and Anthropic all run these programs. The bar is high — think "merged PRs to Kubernetes or PyTorch" — but if you're already contributing, it's worth applying.
@@ -99,15 +99,15 @@ This is the most reliable free tier. Any verified student gets Copilot free for 
 
 ## What I Actually Pay (Real Numbers)
 
-| Tool              | My Cost         | How                           |
-| :---------------- | :-------------- | :---------------------------- |
-| Gemini Plus       | $8/month        | Direct subscription           |
-| GitHub Copilot    | $0              | Student pack                  |
-| GPT-Pro           | ~$50/month      | Friend's account, 4-way split |
-| Kimi 2.6          | ¥100/month      | 2-way split with classmate    |
-| **Monthly total** | **~$65 + ¥100** |                               |
+| Tool              | My Cost        | How                        |
+| :---------------- | :------------- | :------------------------- |
+| Gemini Plus       | $8/month       | Direct subscription        |
+| GitHub Copilot    | $0             | Student pack               |
+| GPT-Pro           | $0             | Friend's ICPC win          |
+| Kimi 2.6          | ¥100/month     | 2-way split with classmate |
+| **Monthly total** | **~$8 + ¥100** |                            |
 
-This is roughly the cost of two textbooks. For the hours saved weekly, it's an easy tradeoff.
+This is roughly the cost of one textbook. For the hours saved weekly, it's an easy tradeoff.
 
 ---
 
@@ -125,7 +125,7 @@ This is roughly the cost of two textbooks. For the hours saved weekly, it's an e
 
 **$50-100/month:**
 
-- Add Kimi or shared GPT-Pro
+- Add Kimi or find a friend with GPT-Pro
 - Worth it for research-heavy semesters
 
 **$200+/month:**
@@ -139,7 +139,7 @@ This is roughly the cost of two textbooks. For the hours saved weekly, it's an e
 
 The AI landscape changes monthly. I review my toolkit every semester and adjust based on actual usage. The best tool isn't the newest or most expensive — it's the one you'll actually use daily.
 
-For me, that's Gemini Plus for quick questions and Copilot for coding. Everything else is situational. Don't overcommit to annual subscriptions; stay flexible.
+For me, that's Gemini Plus for quick questions and Copilot for coding. GPT-Pro is a luxury I get for free through a friend's competition win. Everything else is situational. Don't overcommit to annual subscriptions; stay flexible.
 
 > _"Don't chase the newest model. Chase the workflow that makes you productive."_
 
