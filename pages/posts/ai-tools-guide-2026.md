@@ -54,7 +54,7 @@ Gemini can handle long docs too, but Kimi just understands Chinese content bette
 
 ## Next Up: DeepSeek V4
 
-My Kimi subscription ends this month and I'm planning to try DeepSeek V4. Heard the pricing is aggressively cheap—like ¥0.5 per million tokens—and the reasoning capabilities are surprisingly good. If it lives up to the hype, might replace both Gemini Plus and Kimi for me.
+My Kimi subscription ends this month and I'm planning to try DeepSeek V4. Heard the pricing is aggressively cheap—like ¥2 per million tokens—and the reasoning capabilities are surprisingly good. If it lives up to the hype, might replace both Gemini Plus and Kimi for me.
 
 Will update after a month of use.
 
@@ -104,6 +104,3 @@ Total: less than ¥200/month. About the price of one textbook. For the hours sav
 ---
 
 One last thing—the AI tool landscape changes monthly. My setup will probably look different next month. Stick to monthly subscriptions, stay flexible.
-
-_Author: Phyllis (音音)_
-_Last updated: May 2026_
