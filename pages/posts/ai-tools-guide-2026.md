@@ -42,19 +42,19 @@ Account sharing is against ToS though, so there's always a ban risk. If you don'
 
 ---
 
-## Long Documents: Kimi 2.6
+## Long Documents & API: Kimi 2.6
 
 I split a Kimi 2.6 subscription with a classmate—¥100 each per month. Bought it purely for the context length. Kimi handles ridiculously long documents better than anything else I've tried. I regularly throw entire textbooks or 100+ page manuals at it and ask for summaries or specific info extraction.
 
-The API is nice too. I've built some automation tools with it, like batch-processing lecture recordings into study flashcards.
+But the real killer feature for me is the API access. I use Kimi's API key for my QQ bot and OpenClaw setup. It's also my go-to for code support when I need to process Chinese content or handle those messy formatting quirks in Chinese academic papers.
 
-Gemini can handle long docs too, but Kimi just understands Chinese content better. Especially those messy Chinese academic papers with weird formatting.
+Gemini can handle long docs too, but Kimi just understands Chinese content better. Especially those papers with weird spacing and random line breaks.
 
 ---
 
 ## Next Up: DeepSeek V4
 
-My Kimi subscription ends this month and I'm planning to try DeepSeek V4. Heard the pricing is aggressively cheap—like ¥2 per million tokens—and the reasoning capabilities are surprisingly good. If it lives up to the hype, might replace both Gemini Plus and Kimi for me.
+My Kimi subscription ends this month and I'm planning to try DeepSeek V4. Heard the pricing is aggressively cheap—like ¥0.5 per million tokens—and the reasoning capabilities are surprisingly good. If it lives up to the hype, might replace both Gemini Plus and Kimi for me.
 
 Will update after a month of use.
 
