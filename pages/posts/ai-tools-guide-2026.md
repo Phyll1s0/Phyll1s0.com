@@ -4,6 +4,7 @@ date: 2026-05-07
 type: blog
 lang: en
 tocAlwaysOn: true
+duration: 10min
 ---
 
 [[toc]]

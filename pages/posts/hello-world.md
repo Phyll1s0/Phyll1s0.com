@@ -5,6 +5,7 @@ lang: en
 date: 2026-04-22
 description: Kicking off my personal blog to share thoughts on tech, creative projects, and life.
 art: random
+duration: 5min
 ---
 
 ## Welcome to My Blog

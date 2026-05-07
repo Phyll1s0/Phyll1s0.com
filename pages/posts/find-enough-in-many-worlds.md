@@ -4,6 +4,7 @@ date: 2025-12-13
 type: presentation
 lang: ch
 art: plum
+duration: 10min
 ---
 
 
