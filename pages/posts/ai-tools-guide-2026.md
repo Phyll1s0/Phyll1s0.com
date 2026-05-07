@@ -2,6 +2,7 @@
 title: My AI Toolkit - A CS Student's Practical Guide
 date: 2026-05-07
 type: blog
+lang: en
 tocAlwaysOn: true
 ---
 
@@ -81,12 +82,12 @@ The most reliable free option. Verified students get it free for the entire enro
 
 ## What I Actually Pay
 
-| Tool | Cost | Notes |
-|------|------|-------|
-| Gemini Plus | $8/month | My own money |
-| GitHub Copilot | Free | Student perk |
-| GPT-Pro | Free | Friend's ICPC prize |
-| Kimi 2.6 | ¥100/month | Split with classmate |
+| Tool           | Cost       | Notes                |
+| -------------- | ---------- | -------------------- |
+| Gemini Plus    | $8/month   | My own money         |
+| GitHub Copilot | Free       | Student perk         |
+| GPT-Pro        | Free       | Friend's ICPC prize  |
+| Kimi 2.6       | ¥100/month | Split with classmate |
 
 Total: less than ¥200/month. About the price of one textbook. For the hours saved every week, easy tradeoff.
 

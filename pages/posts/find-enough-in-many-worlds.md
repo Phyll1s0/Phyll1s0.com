@@ -2,6 +2,8 @@
 title: Find Enough in the Many Worlds
 date: 2025-12-13
 type: presentation
+lang: ch
+art: plum
 ---
 
 # Find Enough in the Many Worlds
@@ -11,11 +13,10 @@ type: presentation
 ---
 
 **演讲信息**
+
 - **日期：** 2025年12月10日
 - **活动：** 学子讲坛
 - **地点：** 上海交通大学
-
-<!-- eslint-disable markdown/no-empty-links -->
 
 ---
 
@@ -83,7 +84,7 @@ Enough is elusive because when you reach it, you're no longer the person that on
 
 然后2023年，他在那间租来的公寓里面平静地去世了。
 
-直到他去世，他通过基金会总共捐出了 **80亿美元**。 
+直到他去世，他通过基金会总共捐出了 **80亿美元**。
 
 他的精神Giving while living 影响了后世很多人，比如 比尔盖茨，巴菲特，他们也把自己的大部分资产在生前捐出去，帮助了世界上许许多多的人
 
@@ -131,7 +132,7 @@ Lawrence Yeo 在这里做了一个非常精彩的洞见，
 
 我有一个朋友，他在大一的暑假里开始接触股市，起初他怀揣着一种对这些金融知识的好奇，一种Ambition ，开始学习各类理财的相关知识，想要通过复利为未来积累点本金。恰逢当时牛市，运气也不错，随便买几手可能就是百分之十几二十的收益。
 
- 但很快，这种Ambition变质了。先是天有不测风云，随着牛市过后，伴随着一轮的总体的下沉，他开始不断地亏钱，他看他的朋友晒那种一天赚20%的截图，心生向往，开始去追逐那些波动极大的妖股。他不再关心这家公司好不好，他只关心"他今天要比昨天多赚多少"。他跨过了那条线，滑向了贪婪。
+但很快，这种Ambition变质了。先是天有不测风云，随着牛市过后，伴随着一轮的总体的下沉，他开始不断地亏钱，他看他的朋友晒那种一天赚20%的截图，心生向往，开始去追逐那些波动极大的妖股。他不再关心这家公司好不好，他只关心"他今天要比昨天多赚多少"。他跨过了那条线，滑向了贪婪。
 
 那段时间，他就像个神经质一样。 上课的时候，手机藏在电脑后面刷K线； 吃饭的时候，盯着屏幕上的红红绿绿发呆； 明明账户里其实也就几百几千块钱的波动，但他可能每天要打开那个软件几十次。
 
@@ -183,7 +184,7 @@ Lawrence Yeo 在这里做了一个非常精彩的洞见，
 
 首先，Remove noise。 像查克·菲尼切断与奢华生活的联系一样，试着切断那些引发你焦虑的信息源。 如果你看到朋友圈里别人晒的什么四六级成绩，体育考试分数、晒的精致生活让你感到焦虑，让你觉得自己"不够"，那就关掉它。那是别人的橱窗，不是你的生活。
 
-其次 Redefine Enough  。Lawrence Yeo 说："虽然我们无法完全摆脱'多'的诱惑，但我们可以通过不断的自我审视（Self-Audit），让那条区分野心与贪婪的界线变得清晰。" 在平行世界分裂之前，为自己设定一个锚点。这个锚点应该由你的Ambition,（也就是你想成为什么样的人）来定义，而不是由greedy（也就是别人觉得你应该拥有多少）来定义。
+其次 Redefine Enough 。Lawrence Yeo 说："虽然我们无法完全摆脱'多'的诱惑，但我们可以通过不断的自我审视（Self-Audit），让那条区分野心与贪婪的界线变得清晰。" 在平行世界分裂之前，为自己设定一个锚点。这个锚点应该由你的Ambition,（也就是你想成为什么样的人）来定义，而不是由greedy（也就是别人觉得你应该拥有多少）来定义。
 
 还有第三点，也是我认为最重要的一点，重新夺回我们的注意力，也就是Reclaim Attention。这是我们作为学生最宝贵、也是最容易被挥霍的资产。 AI 领域有一篇奠基性的论文叫《Attention Is All You Need》（注意力就是你所需要的一切）。在人生里也是一样。 **Attention is your only currency.** 不要把它浪费在无止境的比较和"时刻检查"上。
 
@@ -191,7 +192,7 @@ Lawrence Yeo 在这里做了一个非常精彩的洞见，
 
 具体故事情节我就不剧透了，这个片段大概是讲，主角 Walter 历经千辛万苦，终于在喜马拉雅山找到了那个摄影师肖恩。当时，Sean 正在蹲守一只极为罕见的雪豹，摄影师管它叫"ghost cat"。 就在他们等待的时候，雪豹终于出现了！如此的美丽，神圣。 Walter 激动地催促 Sean：（When are you going to take it?）
 
-Sean 并没有拍照。他只是静静地看着那只雪豹，说了一段话： "Sometimes I don't. If I like a moment... I don't like to have the distraction of the camera. I just want to stay in it." 
+Sean 并没有拍照。他只是静静地看着那只雪豹，说了一段话： "Sometimes I don't. If I like a moment... I don't like to have the distraction of the camera. I just want to stay in it."
 
 正如他前面所讲的： **"Beautiful things don't ask for attention."** （美好的事物，从不主动寻求关注。）
 
