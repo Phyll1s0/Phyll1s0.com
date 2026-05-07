@@ -6,7 +6,7 @@ lang: ch
 art: plum
 duration: 10min
 ---
-
+[[toc]]
 
 > 在多重宇宙里寻找足够
 
