@@ -46,7 +46,6 @@ jobs:
       - name: Build
         run: |
           echo "Building with NODE_ENV=$NODE_ENV"
-          node scripts/generate-search-index.js
           pnpm exec vite-ssg build
 
       - name: Setup Pages
