@@ -69,6 +69,13 @@ catalogs:
     vite-svg-loader:
       specifier: ^5.1.1
       version: 5.1.1
+  default:
+    katex:
+      specifier: ^0.16.45
+      version: 0.16.45
+    markdown-it-katex:
+      specifier: ^2.0.3
+      version: 2.0.3
   dev:
     '@antfu/eslint-config':
       specifier: ^8.1.1
@@ -269,6 +276,12 @@ importers:
       fuse.js:
         specifier: ^7.0.0
         version: 7.3.0
+      katex:
+        specifier: 'catalog:'
+        version: 0.16.45
+      markdown-it-katex:
+        specifier: 'catalog:'
+        version: 2.0.3
       matter-attractors:
         specifier: catalog:frontend
         version: 0.1.6
@@ -2867,6 +2880,10 @@ packages:
     resolution: {integrity: sha512-pQpZbdBu7wCTmQUh7ufPmLr0pFoObnGUoL/yhtwJDgmmQpbkg/0HSVti25Fu4rmd1oCR6NGWe9vqTWuWv3GcNA==}
     hasBin: true
 
+  katex@0.6.0:
+    resolution: {integrity: sha512-rS4mY3SvHYg5LtQV6RBcK0if7ur6plyEukAOV+jGGPqFImuzu8fHL6M752iBmRGoUyF0bhZbAPoezehn7xYksA==}
+    hasBin: true
+
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
@@ -3020,6 +3037,9 @@ packages:
     peerDependencies:
       markdown-it: '>= 13.0.0'
 
+  markdown-it-katex@2.0.3:
+    resolution: {integrity: sha512-nUkkMtRWeg7OpdflamflE/Ho/pWl64Lk9wNBKOmaj33XkQdumhXAIYhI0WO03GeiycPCsxbmX536V5NEXpC3Ng==}
+
   markdown-it-link-attributes@4.0.1:
     resolution: {integrity: sha512-pg5OK0jPLg62H4k7M9mRJLT61gUp9nvG0XveKYHMOOluASo9OEF13WlXrpAp2aj35LbedAy3QOCgQCw0tkLKAQ==}
 
@@ -3035,6 +3055,9 @@ packages:
 
   markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
+
+  match-at@0.1.1:
+    resolution: {integrity: sha512-h4Yd392z9mST+dzc+yjuybOGFNOZjmXIPKWjxBd1Bb23r4SmDOsk2NYCU2BMUBGbSpZqwVsZYNq26QS3xfaT3Q==}
 
   matter-attractors@0.1.6:
     resolution: {integrity: sha512-vGFsFHS9m0hXnaswfKXT2nKfPXJs4lwnQJwkGrs1IHrVldKAmlBKBb4OcYh0rwQga3CFWGUq3JvKpWZvZuqlDQ==}
@@ -6575,6 +6598,10 @@ snapshots:
     dependencies:
       commander: 8.3.0
 
+  katex@0.6.0:
+    dependencies:
+      match-at: 0.1.1
+
   keyv@4.5.4:
     dependencies:
       json-buffer: 3.0.1
@@ -6730,6 +6757,10 @@ snapshots:
     dependencies:
       markdown-it: 14.1.1
 
+  markdown-it-katex@2.0.3:
+    dependencies:
+      katex: 0.6.0
+
   markdown-it-link-attributes@4.0.1: {}
 
   markdown-it-magic-link@0.1.4:
@@ -6748,6 +6779,8 @@ snapshots:
       uc.micro: 2.1.0
 
   markdown-table@3.0.3: {}
+
+  match-at@0.1.1: {}
 
   matter-attractors@0.1.6: {}
 

@@ -9,6 +9,7 @@ import matter from 'gray-matter'
 import anchor from 'markdown-it-anchor'
 import GitHubAlerts from 'markdown-it-github-alerts'
 import LinkAttributes from 'markdown-it-link-attributes'
+import MarkdownItKatex from 'markdown-it-katex'
 import MarkdownItMagicLink from 'markdown-it-magic-link'
 import TOC from 'markdown-it-table-of-contents'
 import sharp from 'sharp'
@@ -124,6 +125,8 @@ export default defineConfig({
           slugify,
           containerHeaderHtml: '<div class="table-of-contents-anchor"><div class="i-ri-menu-2-fill" /></div>',
         })
+
+        md.use(MarkdownItKatex)
 
         md.use(MarkdownItMagicLink, {
           linksMap: {

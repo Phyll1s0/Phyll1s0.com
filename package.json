@@ -22,6 +22,8 @@
     "dayjs": "catalog:frontend",
     "floating-vue": "catalog:frontend",
     "fuse.js": "^7.0.0",
+    "katex": "catalog:",
+    "markdown-it-katex": "catalog:",
     "matter-attractors": "catalog:frontend",
     "matter-js": "catalog:frontend",
     "nprogress": "catalog:frontend",
