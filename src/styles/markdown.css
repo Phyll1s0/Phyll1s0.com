@@ -286,3 +286,12 @@ h6:focus .header-anchor {
   margin: -1px -3px;
   border-radius: 4px;
 }
+
+/* Heading weights */
+.prose h2 {
+  font-weight: 500;
+}
+
+.prose h3 {
+  font-weight: 400;
+}

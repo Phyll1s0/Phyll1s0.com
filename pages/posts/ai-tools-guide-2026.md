@@ -2,6 +2,7 @@
 title: My AI Toolkit - A CS Student's Practical Guide
 date: 2026-05-07
 type: blog
+tocAlwaysOn: true
 ---
 
 Honestly, six months ago I was still in the "AI tools are overhyped" camp. Now I'm spending more on AI subscriptions than on bubble tea, and weirdly enough, it feels worth it.
