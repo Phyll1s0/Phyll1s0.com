@@ -29,7 +29,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
         with:
           version: 10.33.0
           run_install: false
@@ -37,7 +37,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           cache: pnpm
 
       - name: Install dependencies
@@ -46,6 +46,7 @@ jobs:
       - name: Build
         run: |
           echo "Building with NODE_ENV=$NODE_ENV"
+          node scripts/generate-search-index.js
           pnpm exec vite-ssg build
 
       - name: Setup Pages
