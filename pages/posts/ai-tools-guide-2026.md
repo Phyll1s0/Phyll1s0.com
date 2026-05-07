@@ -6,104 +6,104 @@ type: blog
 
 # My AI Toolkit - A CS Student's Practical Guide
 
-说实话，半年前我对 AI 工具的态度还是"能用就行"。结果现在每个月在 AI 上花的钱比奶茶还多，而且居然觉得挺值的。
+Honestly, six months ago I was still in the "AI tools are overhyped" camp. Now I'm spending more on AI subscriptions than on bubble tea, and weirdly enough, it feels worth it.
 
-这篇不是那种"你必须用这些工具"的安利文，就是单纯记录一下我现在的 workflow，以及踩过的一些坑。
-
----
-
-## 日常问答：Gemini Plus
-
-我花 8 刀一个月买了 Gemini Plus，现在每天打开的频率比微信还高。主要是它的上下文真的太长了，我可以直接把一整篇论文或者几百行代码丢进去问问题，它不会半路失忆。
-
-而且我发现它看截图的能力挺强的。上课拍的 PPT 直接丢进去，让它总结重点，比自己看快多了。不过有时候它也会一本正经地胡说八道，所以关键信息我还是会 double check。
-
-8 刀一个月，差不多就是两杯奶茶的钱，但省下来的时间可不止两杯奶茶。
+This isn't one of those "you MUST use these tools" posts. Just documenting my current workflow and the mistakes I've made along the way.
 
 ---
 
-## 写代码：GitHub Copilot
+## Daily Q&A: Gemini Plus
 
-这个真的是学生福利，用学校邮箱申请 GitHub Student Pack 就能免费拿。我配 VS Code 用，感觉就像有个不会累的小伙伴在旁边帮我写代码。
+I pay $8/month for Gemini Plus and I probably use it more than WeChat at this point. The context window is ridiculous—I can dump an entire research paper or 500 lines of code and ask specific questions without it forgetting what we were talking about halfway through.
 
-当然它也不是万能的。有时候它给出的建议简直是"复古风"，用的还是好几年前的写法。但免费的东西，还要什么自行车呢？
+The multimodal stuff actually works too. I screenshot lecture slides and ask it to summarize the key points. Way faster than reading them myself. Though sometimes it confidently makes things up, so I still double-check anything important.
 
-申请大概等两三天就过了，建议每个 CS 学生都薅一下这个羊毛。
-
----
-
-## 搞大项目：GPT-Pro（蹭朋友的）
-
-这个我要重点说一下，因为我自己没花钱。我朋友去年打 ICPC World Finals，OpenAI 给每个决赛选手送了一年 GPT-Pro。所以我现在就是白嫖他的账号在用。
-
-GPT-Pro 的 Codex agent 确实猛。我跟它说"给我做个能上传文件然后自动分类的功能"，它真的能自己规划、写代码、测试，然后跑通。虽然最后还是要我 review 和改 bug，但从零开始写的时间省了一大半。
-
-不过账号共享这种事毕竟不太合规，有风险。如果没这个渠道，Copilot Pro 或者 Gemini 的 coding 功能也够用。
+$8 is like two bubble teas. But the time saved is definitely more than two bubble teas worth.
 
 ---
 
-## 看长文档：Kimi 2.6
+## Coding: GitHub Copilot
 
-我和同学拼了一个 Kimi 2.6 的账号，每人每月 100 块。买它纯粹是为了看长文档——Kimi 的上下文长度是真的变态，我可以丢一整本教材进去让它总结，或者丢几十页的技术手册问具体的问题。
+This is the ultimate student freebie. Apply for the GitHub Student Pack with your .edu email and you get Copilot for free. I use it with VS Code and it feels like having a coding buddy who never gets tired.
 
-API 也挺好用的，我拿来做过一些自动化的小工具，比如批量处理课堂录音转文字，然后自动生成复习卡片。
+It's not perfect though. Sometimes it suggests code that's straight out of 2019. But hey, it's free. What do you expect?
 
-Gemini 也能看长文档，但 Kimi 对中文内容的理解确实更舒服一些，尤其是那种格式乱七八糟的中文论文。
-
----
-
-## 准备试水：DeepSeek V4
-
-Kimi 的订阅这个月就到期了，我准备换 DeepSeek V4 试试。听说价格杀到 5 毛钱一百万 token，而且推理能力还不错。如果实际体验 OK 的话，可能以后就用它替代 Gemini Plus 和 Kimi 了。
-
-等我用一个月再来更新体验。
+Takes a couple days to get approved. Every CS student should grab this.
 
 ---
 
-## 一些白嫖经验
+## Big Projects: GPT-Pro (Borrowed from a Friend)
 
-**Gemini Pro 学生认证**
-去年 7 月 Google 搞过活动，用美国学生证可以白嫖 Pro。我搞了一个，结果因为一直在国内用，没多久就被 ban 了。淘宝上有卖那种几十块钱的 Pro 账号，我怀疑都是批量注册的学生号，随时可能翻车。
+This one's interesting because I'm not paying for it. My friend competed at ICPC World Finals last year and OpenAI gives every finalist a free year of GPT-Pro. So I'm basically leeching off his account.
 
-**GPT-Pro 比赛赠送**
-ICPC World Finals 的选手直接送一年，这个是我朋友亲测的。如果打竞赛的话可以冲一下。
+The Codex agent mode is actually insane. I can say "build me a file upload and auto-categorization feature" and it will plan, write, test, and iterate until it works. Still needs my review and bug fixes, but the time saved from starting from scratch is massive.
 
-**开源贡献换 Pro**
-给大项目贡献代码也能换免费额度，OpenAI、Google、Anthropic 都有这种 program。但门槛挺高的，不是随便提个 PR 就能拿的。
+Account sharing is against ToS though, so there's always a ban risk. If you don't have a friend with free Pro, Copilot Pro or Gemini's coding features are solid alternatives.
+
+---
+
+## Long Documents: Kimi 2.6
+
+I split a Kimi 2.6 subscription with a classmate—¥100 each per month. Bought it purely for the context length. Kimi handles ridiculously long documents better than anything else I've tried. I regularly throw entire textbooks or 100+ page manuals at it and ask for summaries or specific info extraction.
+
+The API is nice too. I've built some automation tools with it, like batch-processing lecture recordings into study flashcards.
+
+Gemini can handle long docs too, but Kimi just understands Chinese content better. Especially those messy Chinese academic papers with weird formatting.
+
+---
+
+## Next Up: DeepSeek V4
+
+My Kimi subscription ends this month and I'm planning to try DeepSeek V4. Heard the pricing is aggressively cheap—like ¥0.5 per million tokens—and the reasoning capabilities are surprisingly good. If it lives up to the hype, might replace both Gemini Plus and Kimi for me.
+
+Will update after a month of use.
+
+---
+
+## Some Free Tier Hacks
+
+**Gemini Pro Student Verification**
+Google had a promo last July where verified students got free Pro access. Needed a US student ID and payment method on file. I managed to get one, but got banned later—probably because I was accessing it from mainland China too much. Those cheap Gemini Pro accounts on Taobao? Pretty sure they're bulk-registered student accounts. Use at your own risk.
+
+**GPT-Pro from Competitions**
+ICPC World Finals participants get a free year. No strings attached. My friend can confirm this works.
+
+**Open Source Contributions**
+Major contributors to big projects can apply for free API credits or Pro access. OpenAI, Google, and Anthropic all have these programs. But the bar is high—we're talking merged PRs to Kubernetes or PyTorch level.
 
 **GitHub Copilot**
-最稳的免费渠道，学生认证完直接拿，我已经白嫖两年了。
+The most reliable free option. Verified students get it free for the entire enrollment period. I've been using it for two years with zero issues.
 
 ---
 
-## 我现在的开销
+## What I Actually Pay
 
-| 工具           | 价格      | 备注               |
-| -------------- | --------- | ------------------ |
-| Gemini Plus    | 8 刀/月   | 自己掏钱           |
-| GitHub Copilot | 免费      | 学生福利           |
-| GPT-Pro        | 免费      | 蹭朋友的 ICPC 奖励 |
-| Kimi 2.6       | 100 块/月 | 和同学拼           |
+| Tool           | Cost       | Notes                |
+| -------------- | ---------- | -------------------- |
+| Gemini Plus    | $8/month   | My own money         |
+| GitHub Copilot | Free       | Student perk         |
+| GPT-Pro        | Free       | Friend's ICPC prize  |
+| Kimi 2.6       | ¥100/month | Split with classmate |
 
-加起来一个月不到 200 块，差不多就是一本教材的钱。
-
----
-
-## 如果你也想试试
-
-**不想花钱：**Copilot + Gemini 免费版，基本够用了。
-
-**想花点小钱：**Gemini Plus 一个月 8 刀，性价比最高。
-
-**经常写代码：**GPT-Plus 一个月 20 刀，coding 能力确实比 Gemini 强一些。
-
-**需要看长文档：**Kimi 或者等我的 DeepSeek V4 测评。
-
-**有钱任性：**直接上 GPT-Pro，但 200 刀一个月对学生来说确实不便宜。
+Total: less than ¥200/month. About the price of one textbook. For the hours saved every week, easy tradeoff.
 
 ---
 
-最后说一句，AI 工具迭代太快了，我现在的配置可能下个月就变了。别一次性买年付，月付灵活调整最划算。
+## If You Want to Try
 
-_作者：Phyllis（音音）_
-_最后更新：2026 年 5 月_
+**Zero budget:** Copilot + Gemini free tier. Covers most needs.
+
+**Small budget:** Gemini Plus at $8/month. Best bang for buck.
+
+**Code-heavy work:** GPT-Plus at $20/month. Better coding agent than Gemini.
+
+**Long documents:** Kimi, or wait for my DeepSeek V4 review.
+
+**Money to burn:** GPT-Pro at $200/month. Overkill for most students.
+
+---
+
+One last thing—the AI tool landscape changes monthly. My setup will probably look different next month. Stick to monthly subscriptions, stay flexible.
+
+_Author: Phyllis (音音)_
+_Last updated: May 2026_
