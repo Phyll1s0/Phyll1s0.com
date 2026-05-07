@@ -1,6 +1,6 @@
 ---
 title: Find Enough in the Many Worlds
-date: 2025-01-01
+date: 2025-12-13
 type: presentation
 ---
 
