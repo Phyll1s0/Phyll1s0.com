@@ -69,49 +69,77 @@ I'm particularly interested in their reasoning model. If the benchmarks hold up 
 
 ---
 
-## My Actual Monthly Costs
+## Bonus: Free Tier Hacks (Student Edition)
 
-| Tool           | Cost            | Notes                         |
-| :------------- | :-------------- | :---------------------------- |
-| Gemini Plus    | $8              | Personal subscription         |
-| GitHub Copilot | $0              | Student pack                  |
-| GPT-Pro        | ~$50            | Friend's account, shared cost |
-| Kimi 2.6       | ¥100            | Split with classmate          |
-| **Total**      | **~$65 + ¥100** |                               |
+### Gemini Pro — Student Verification Loop
 
-This is roughly the cost of two textbooks per month. For the time saved on debugging, research, and writing, it's an easy tradeoff.
+When Gemini Pro first launched last July, Google offered free Pro access to verified students. The catch: it required a US student ID and a payment method on file. I managed to get approved with some creative paperwork, but the account got banned later — probably because I accessed it from mainland China too frequently.
+
+**The workaround:** Some resellers on Taobao sell "cheap Gemini Pro accounts" for around ¥20-30. My theory? Most of these are bulk-registered student accounts using US student IDs and virtual cards. The accounts work until Google audits them.
+
+**My advice:** If you have access to a US student ID (exchange program, dual-degree, etc.), it's worth trying the official route. Otherwise, the $8/month is cheap enough that I wouldn't risk buying gray-market accounts that could vanish overnight.
+
+### GPT-Pro — The Competition Route
+
+**Method 1: ICPC World Finals**
+If you compete at ICPC World Finals, OpenAI gives every finalist a free year of GPT-Pro. No strings attached. This is how I got my first taste of Pro-level access — and why I'm now splitting a paid account with friends. If you're competitive programming-oriented, train hard and aim for finals.
+
+**Method 2: Open Source Contributions**
+Significant contributors to major open-source projects can apply for free API credits or Pro access. OpenAI, Google, and Anthropic all run these programs. The bar is high — think "merged PRs to Kubernetes or PyTorch" — but if you're already contributing, it's worth applying.
+
+**Anthropic's version:** They also give free Pro access to notable open-source contributors. But honestly, Claude accounts get banned so easily from China that even if you get free Pro, you might lose it within weeks. Not worth the hassle unless you have a stable US IP.
+
+### GitHub Copilot — The Guaranteed Free Option
+
+This is the most reliable free tier. Any verified student gets Copilot free for as long as you're enrolled. I've had it for two years with zero issues. Apply with your .edu email, wait 2-3 days for approval, and you're set.
+
+**Pro tip:** The student pack also includes free JetBrains licenses, Azure credits, and a bunch of other tools. It's genuinely one of the best student perks in tech.
 
 ---
 
-## Recommendations by Budget
+## What I Actually Pay (Real Numbers)
+
+| Tool              | My Cost         | How                           |
+| :---------------- | :-------------- | :---------------------------- |
+| Gemini Plus       | $8/month        | Direct subscription           |
+| GitHub Copilot    | $0              | Student pack                  |
+| GPT-Pro           | ~$50/month      | Friend's account, 4-way split |
+| Kimi 2.6          | ¥100/month      | 2-way split with classmate    |
+| **Monthly total** | **~$65 + ¥100** |                               |
+
+This is roughly the cost of two textbooks. For the hours saved weekly, it's an easy tradeoff.
+
+---
+
+## Budget Tiers: What I'd Recommend
 
 **Zero budget:**
 
 - GitHub Copilot (student free) + Gemini free tier
-- You lose advanced features but can still code effectively and get decent Q&A
+- Covers 80% of coding and Q&A needs
 
-**$10-20/month:**
+**$10/month:**
 
 - Gemini Plus ($8) + Copilot free
-- Covers 90% of student needs
+- The sweet spot for most students
 
 **$50-100/month:**
 
-- Add Kimi or a shared GPT-Pro access
-- Worth it if you're doing research-heavy work or complex projects
+- Add Kimi or shared GPT-Pro
+- Worth it for research-heavy semesters
 
 **$200+/month:**
 
-- Your own GPT-Pro or multiple premium subscriptions
-- Only justified if you're building a startup or doing graduate-level research
+- Your own GPT-Pro or multiple subs
+- Only if building a startup or doing grad-level research
 
 ---
 
 ## Final Thoughts
 
-The AI landscape changes monthly. My advice: don't overcommit to annual subscriptions. I review my toolkit every semester and adjust based on what I'm actually using.
+The AI landscape changes monthly. I review my toolkit every semester and adjust based on actual usage. The best tool isn't the newest or most expensive — it's the one you'll actually use daily.
 
-The best tool is the one you'll actually use daily. For me, that's Gemini Plus for quick questions and Copilot for coding. Everything else is situational.
+For me, that's Gemini Plus for quick questions and Copilot for coding. Everything else is situational. Don't overcommit to annual subscriptions; stay flexible.
 
 > _"Don't chase the newest model. Chase the workflow that makes you productive."_
 
