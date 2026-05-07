@@ -123,6 +123,11 @@ This is roughly the cost of one textbook. For the hours saved weekly, it's an ea
 - Gemini Plus ($8) + Copilot free
 - The sweet spot for most students
 
+**$20/month:**
+
+- GPT-Plus ($20) + Copilot free
+- Better coding agent than Gemini, good for serious projects
+
 **$50-100/month:**
 
 - Add Kimi or find a friend with GPT-Pro
