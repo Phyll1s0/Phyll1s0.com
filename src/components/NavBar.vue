@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import SearchModal from './SearchModal.vue'
+
 function toTop() {
   window.scrollTo({
     top: 0,
@@ -47,6 +49,7 @@ const { y: scroll } = useWindowScroll()
         <a href="https://x.com/louhao088" target="_blank" title="X/Twitter" class="lt-md:hidden">
           <div i-ri-twitter-x-line />
         </a>
+        <SearchModal />
         <ToggleTheme />
       </div>
     </nav>

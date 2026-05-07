@@ -1,0 +1,67 @@
+[
+  {
+    "title": "Bookmarks",
+    "path": "/bookmarks"
+  },
+  {
+    "title": "Private Thoughts",
+    "path": "/drafts/private-thoughts",
+    "date": "2026-04-30T00:00:00.000Z"
+  },
+  {
+    "title": "Illustrations",
+    "path": "/illustrations"
+  },
+  {
+    "title": "Hao Lou (楼灏)",
+    "path": "/index"
+  },
+  {
+    "title": "Media Consumption",
+    "path": "/media"
+  },
+  {
+    "title": "Notes - Hao Lou",
+    "path": "/notes"
+  },
+  {
+    "title": "Photos",
+    "path": "/photos"
+  },
+  {
+    "title": "My AI Toolkit - A CS Student's Practical Guide",
+    "path": "/posts/ai-tools-guide-2026",
+    "date": "2026-05-07T00:00:00.000Z",
+    "type": "blog"
+  },
+  {
+    "title": "Hello World — My New Blog",
+    "path": "/posts/hello-world",
+    "date": "2026-04-22T00:00:00.000Z"
+  },
+  {
+    "title": "Blog - Hao Lou",
+    "path": "/posts/index"
+  },
+  {
+    "title": "私人日记",
+    "path": "/posts/private-diary",
+    "date": "2026-04-30T00:00:00.000Z"
+  },
+  {
+    "title": "Private",
+    "path": "/private"
+  },
+  {
+    "title": "Projects",
+    "path": "/projects"
+  },
+  {
+    "title": "Talks - Hao Lou",
+    "path": "/talks"
+  },
+  {
+    "title": "Use",
+    "path": "/use"
+  }
+]
