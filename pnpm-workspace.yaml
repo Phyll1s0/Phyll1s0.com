@@ -1,8 +1,9 @@
-catalogMode: prefer
-shellEmulator: true
-trustPolicy: no-downgrade
-
 packages: []
+catalog:
+  fuse.js: ^7.3.0
+  katex: ^0.16.45
+  markdown-it-katex: ^2.0.3
+catalogMode: prefer
 
 catalogs:
   build:
@@ -94,3 +95,5 @@ onlyBuiltDependencies:
   - sharp
   - simple-git-hooks
   - unrs-resolver
+shellEmulator: true
+trustPolicy: no-downgrade
