@@ -45,10 +45,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: |
-          echo "Building with NODE_ENV=$NODE_ENV"
-          node scripts/generate-search-index.js
-          pnpm exec vite-ssg build
+        run: pnpm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
