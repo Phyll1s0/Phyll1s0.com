@@ -19,8 +19,8 @@ projects:
       desc: 'A full-featured ticketing platform for event management. Handles reservations, seat allocation, and user management with a clean web interface.'
       icon: 'i-carbon-ticket'
   Web & Tools:
-    - name: 'Phyllis0.Space'
-      link: 'https://github.com/Phyll1s0/Phyll1s0.Space'
+    - name: 'Phyllis0.com'
+      link: 'https://github.com/Phyll1s0/Phyll1s0.com'
       desc: 'My personal portfolio website built with Vue, Vite, and UnoCSS. A minimal and elegant showcase of my work.'
       icon: 'i-carbon-website'
     - name: 'Open Source Contributions'
