@@ -97,6 +97,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/posts/find-enough-in-many-worlds': RouteRecordInfo<
+      '/posts/find-enough-in-many-worlds',
+      '/posts/find-enough-in-many-worlds',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/posts/hello-world': RouteRecordInfo<
       '/posts/hello-world',
       '/posts/hello-world',
@@ -111,6 +118,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/presentations': RouteRecordInfo<
+      '/presentations',
+      '/presentations',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/private': RouteRecordInfo<
       '/private',
       '/private',
@@ -121,13 +135,6 @@ declare module 'vue-router/auto-routes' {
     '/projects': RouteRecordInfo<
       '/projects',
       '/projects',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    '/talks': RouteRecordInfo<
-      '/talks',
-      '/talks',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -212,6 +219,12 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
+    'pages/posts/find-enough-in-many-worlds.md': {
+      routes:
+        | '/posts/find-enough-in-many-worlds'
+      views:
+        | never
+    }
     'pages/posts/hello-world.md': {
       routes:
         | '/posts/hello-world'
@@ -224,6 +237,12 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
+    'pages/presentations.md': {
+      routes:
+        | '/presentations'
+      views:
+        | never
+    }
     'pages/private.md': {
       routes:
         | '/private'
@@ -233,12 +252,6 @@ declare module 'vue-router/auto-routes' {
     'pages/projects.md': {
       routes:
         | '/projects'
-      views:
-        | never
-    }
-    'pages/talks.md': {
-      routes:
-        | '/talks'
       views:
         | never
     }

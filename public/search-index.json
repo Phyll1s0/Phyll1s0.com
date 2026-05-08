@@ -30,6 +30,12 @@
     "type": "blog"
   },
   {
+    "title": "Find Enough in the Many Worlds",
+    "path": "/posts/find-enough-in-many-worlds",
+    "date": "2025-12-13",
+    "type": "presentation"
+  },
+  {
     "title": "Hello World — My New Blog",
     "path": "/posts/hello-world",
     "date": "2026-04-22"
@@ -39,12 +45,12 @@
     "path": "/posts/index"
   },
   {
-    "title": "Projects",
-    "path": "/projects"
+    "title": "Notes - Hao Lou",
+    "path": "/presentations"
   },
   {
-    "title": "Talks - Hao Lou",
-    "path": "/talks"
+    "title": "Projects",
+    "path": "/projects"
   },
   {
     "title": "Use",
