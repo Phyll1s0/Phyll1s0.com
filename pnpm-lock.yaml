@@ -70,6 +70,9 @@ catalogs:
       specifier: ^5.1.1
       version: 5.1.1
   default:
+    fuse.js:
+      specifier: ^7.3.0
+      version: 7.3.0
     katex:
       specifier: ^0.16.45
       version: 0.16.45
@@ -274,7 +277,7 @@ importers:
         specifier: catalog:frontend
         version: 5.2.2(vue@3.5.32(typescript@6.0.2))
       fuse.js:
-        specifier: ^7.0.0
+        specifier: 'catalog:'
         version: 7.3.0
       katex:
         specifier: 'catalog:'
