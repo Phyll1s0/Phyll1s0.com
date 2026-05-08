@@ -137,10 +137,14 @@ const ArtComponent = computed(() => {
   >
     <slot />
   </article>
+  <GiscusComments
+    v-if="frontmatter.duration && !frontmatter.draft"
+    class="prose m-auto mt-10 mb-8 slide-enter animate-delay-500 print:hidden"
+  />
   <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8 slide-enter animate-delay-500 print:hidden">
     <template v-if="frontmatter.duration">
       <span font-mono op50>> </span>
-      <span op50>comment on </span>
+      <span op50>share on </span>
       <a :href="blueskyUrl" target="_blank" op50>bluesky</a>
       <span op25> / </span>
       <a :href="elkUrl" target="_blank" op50>mastodon</a>
