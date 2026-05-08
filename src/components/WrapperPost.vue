@@ -13,9 +13,23 @@ const route = useRoute()
 const content = ref<HTMLDivElement>()
 
 const base = 'https://phyll1s0.com'
-const tweetUrl = computed(() => `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Reading ${base}${route.path}\n\nI think...`)}`)
-const elkUrl = computed(() => `https://elk.zone/intent/post?text=${encodeURIComponent(`Reading ${base}${route.path}\n\nI think...`)}`)
-const blueskyUrl = computed(() => `https://bsky.app/intent/compose?text=${encodeURIComponent(`Reading ${base}${route.path}\n\nI think...`)}`)
+const pageUrl = computed(() => `${base}${route.path}`)
+const shareText = computed(() => `Reading ${pageUrl.value}\n\nI think...`)
+const shareTitle = computed(() => frontmatter.display ?? frontmatter.title ?? 'Phyll1s0.com')
+const shareSummary = computed(() => frontmatter.description ?? '')
+const tweetUrl = computed(() => `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText.value)}`)
+const elkUrl = computed(() => `https://elk.zone/intent/post?text=${encodeURIComponent(shareText.value)}`)
+const blueskyUrl = computed(() => `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText.value)}`)
+const qqUrl = computed(() => `https://connect.qq.com/widget/shareqq/index.html?${new URLSearchParams({
+  summary: shareSummary.value,
+  title: shareTitle.value,
+  url: pageUrl.value,
+})}`)
+const wechatUrl = computed(() => `https://api.qrserver.com/v1/create-qr-code/?${new URLSearchParams({
+  data: pageUrl.value,
+  margin: '16',
+  size: '240x240',
+})}`)
 
 onMounted(() => {
   const navigate = () => {
@@ -150,6 +164,10 @@ const ArtComponent = computed(() => {
       <a :href="elkUrl" target="_blank" op50>mastodon</a>
       <span op25> / </span>
       <a :href="tweetUrl" target="_blank" op50>twitter</a>
+      <span op25> / </span>
+      <a :href="wechatUrl" target="_blank" title="Scan with WeChat" op50>wechat</a>
+      <span op25> / </span>
+      <a :href="qqUrl" target="_blank" op50>qq</a>
     </template>
     <br>
     <span font-mono op50>> </span>
