@@ -7,7 +7,7 @@ const languageOptions: Array<{
   label: string
   value: Language
 }> = [
-  { label: 'English', value: 'en' },
+  { label: 'EN', value: 'en' },
   { label: '中文', value: 'zh' },
 ]
 
@@ -24,17 +24,18 @@ function setLanguage(value: Language) {
 <template>
   <div class="about-language-toggle">
     <div class="language-switcher" aria-label="About language">
-      <button
-        v-for="option in languageOptions"
-        :key="option.value"
-        type="button"
-        class="language-button"
-        :class="{ active: language === option.value }"
-        :aria-pressed="language === option.value"
-        @click="setLanguage(option.value)"
-      >
-        {{ option.label }}
-      </button>
+      <template v-for="(option, index) in languageOptions" :key="option.value">
+        <button
+          type="button"
+          class="language-button"
+          :class="{ active: language === option.value }"
+          :aria-pressed="language === option.value"
+          @click="setLanguage(option.value)"
+        >
+          {{ option.label }}
+        </button>
+        <span v-if="index === 0" class="language-divider" aria-hidden="true">/</span>
+      </template>
     </div>
 
     <section v-show="language === 'en'" class="about-copy" lang="en">
@@ -118,49 +119,51 @@ function setLanguage(value: Language) {
 
 .language-switcher {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
-  gap: 0.25rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid rgba(125, 125, 125, 0.22);
-  border-radius: 8px;
-  padding: 0.2rem;
+  gap: 0.42rem;
+  margin-bottom: 1.35rem;
   width: fit-content;
   margin-left: auto;
-  background: rgba(125, 125, 125, 0.04);
+  color: var(--fg);
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
+.language-divider {
+  opacity: 0.25;
 }
 
 .language-button {
-  min-width: 4.8rem;
   border: 0;
-  border-radius: 6px;
-  padding: 0.35rem 0.7rem;
-  color: var(--fg);
+  padding: 0.05rem 0;
+  color: inherit;
   font: inherit;
-  font-size: 0.86rem;
-  line-height: 1.4;
+  letter-spacing: 0;
   background: transparent;
-  opacity: 0.56;
+  opacity: 0.38;
   cursor: pointer;
   transition:
-    background-color 0.18s ease,
     color 0.18s ease,
     opacity 0.18s ease;
 }
 
 .language-button:hover,
 .language-button:focus-visible {
-  opacity: 0.9;
+  opacity: 0.72;
 }
 
 .language-button:focus-visible {
   outline: 2px solid var(--fg-deeper);
-  outline-offset: 2px;
+  outline-offset: 0.2rem;
 }
 
 .language-button.active {
   color: var(--fg-deeper);
-  background: rgba(125, 125, 125, 0.16);
-  opacity: 1;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+  opacity: 0.82;
 }
 
 .about-copy p:first-child {
@@ -195,12 +198,7 @@ function setLanguage(value: Language) {
 
 @media (max-width: 640px) {
   .language-switcher {
-    justify-content: stretch;
-    width: 100%;
-  }
-
-  .language-button {
-    flex: 1;
+    margin-bottom: 1.1rem;
   }
 }
 </style>
