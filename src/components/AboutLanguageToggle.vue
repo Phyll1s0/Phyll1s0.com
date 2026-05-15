@@ -198,7 +198,6 @@ function setLanguage(value: Language) {
         >
           <span>
             <span class="link-label">{{ friend.label }}</span>
-            <span class="link-detail">{{ friend.detail[language] }}</span>
           </span>
           <span class="link-arrow" aria-hidden="true">→</span>
         </a>
