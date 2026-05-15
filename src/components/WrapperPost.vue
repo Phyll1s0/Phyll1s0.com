@@ -249,14 +249,16 @@ const ArtComponent = computed(() => {
   <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8 slide-enter animate-delay-500 print:hidden">
     <template v-if="frontmatter.duration">
       <span font-mono op50>> </span>
-      <span op50>share on </span>
+      <span op50>post on </span>
       <a :href="blueskyUrl" target="_blank" op50>bluesky</a>
       <span op25> / </span>
       <a :href="elkUrl" target="_blank" op50>mastodon</a>
       <span op25> / </span>
       <a :href="tweetUrl" target="_blank" op50>twitter</a>
-      <span op25> / </span>
-      <button type="button" class="share-action" title="Share to WeChat or QQ" op50 @click="shareNative">
+      <br>
+      <span font-mono op50>> </span>
+      <span op50>send link via </span>
+      <button type="button" class="share-action" title="Open device share sheet for WeChat or QQ" op50 @click="shareNative">
         wechat/qq
       </button>
       <span op25> / </span>
