@@ -53,7 +53,7 @@ const onlineLinks = [
 
 const friendLinks = [
   {
-    label: 'norb.space',
+    label: 'norb',
     url: 'https://norb.space',
     detail: {
       en: 'A friend\'s corner of the web',
@@ -61,7 +61,7 @@ const friendLinks = [
     },
   },
   {
-    label: 'theunknownth.ing',
+    label: 'theunkownthing',
     url: 'https://theunknownth.ing',
     detail: {
       en: 'The About page that inspired this structure',
