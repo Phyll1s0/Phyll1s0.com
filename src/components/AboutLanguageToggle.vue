@@ -81,6 +81,10 @@ function setLanguage(value: Language) {
 
 <template>
   <div class="about-language-toggle">
+    <div class="about-backdrop" aria-hidden="true">
+      <span>ABOUT</span>
+    </div>
+
     <div class="language-switcher" aria-label="About language">
       <template v-for="(option, index) in languageOptions" :key="option.value">
         <button
@@ -161,6 +165,65 @@ function setLanguage(value: Language) {
 <style scoped>
 .about-language-toggle {
   position: relative;
+  z-index: 0;
+  isolation: isolate;
+  padding-top: 0.35rem;
+}
+
+.about-backdrop {
+  position: absolute;
+  z-index: -1;
+  top: -3.4rem;
+  right: -5.25rem;
+  width: min(34rem, 92vw);
+  height: 13rem;
+  overflow: hidden;
+  color: rgba(125, 125, 125, 0.2);
+  pointer-events: none;
+}
+
+.about-backdrop::before,
+.about-backdrop::after {
+  position: absolute;
+  display: block;
+  content: '';
+}
+
+.about-backdrop::before {
+  right: 0.25rem;
+  bottom: 1.15rem;
+  width: 70%;
+  height: 1px;
+  background: currentColor;
+  box-shadow:
+    0 -2.7rem 0 rgba(125, 125, 125, 0.14),
+    0 -5.4rem 0 rgba(125, 125, 125, 0.1);
+}
+
+.about-backdrop::after {
+  top: 0.4rem;
+  right: 1rem;
+  width: 1px;
+  height: 76%;
+  background: currentColor;
+  box-shadow:
+    -4.2rem 0 0 rgba(125, 125, 125, 0.14),
+    -8.4rem 0 0 rgba(125, 125, 125, 0.1);
+}
+
+.about-backdrop span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: transparent;
+  font-size: clamp(4.8rem, 15vw, 10rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+  opacity: 0.62;
+  -webkit-text-stroke: 1px currentColor;
+  text-stroke: 1px currentColor;
+  user-select: none;
 }
 
 .language-switcher {
@@ -330,6 +393,38 @@ function setLanguage(value: Language) {
 }
 
 @media (max-width: 640px) {
+  .about-language-toggle {
+    padding-top: 0.1rem;
+  }
+
+  .about-backdrop {
+    top: -2rem;
+    right: -1.25rem;
+    width: 88vw;
+    height: 8.5rem;
+    opacity: 0.72;
+  }
+
+  .about-backdrop::before {
+    bottom: 0.75rem;
+    width: 58%;
+    box-shadow:
+      0 -2rem 0 rgba(125, 125, 125, 0.12),
+      0 -4rem 0 rgba(125, 125, 125, 0.08);
+  }
+
+  .about-backdrop::after {
+    right: 0.65rem;
+    height: 64%;
+    box-shadow:
+      -3rem 0 0 rgba(125, 125, 125, 0.12),
+      -6rem 0 0 rgba(125, 125, 125, 0.08);
+  }
+
+  .about-backdrop span {
+    font-size: clamp(3.6rem, 22vw, 6.5rem);
+  }
+
   .language-switcher {
     margin-bottom: 1.1rem;
   }
