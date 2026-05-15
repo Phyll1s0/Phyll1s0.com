@@ -1,0 +1,1 @@
+This site is built on top of [Anthony Fu’s `antfu.me`](https://github.com/antfu/antfu.me), then bent toward my own pages, writing, and small experiments. The scaffolding gave me a generous starting point; the voice, taste, and occasional rough edges from here are mine.

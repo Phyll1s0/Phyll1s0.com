@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import MarkdownIt from 'markdown-it'
+import creditEn from '../../pages/about/credit.en.md?raw'
+import creditZh from '../../pages/about/credit.zh.md?raw'
 import aboutEn from '../../pages/about/en.md?raw'
+import funFactEn from '../../pages/about/funfact.en.md?raw'
+import funFactZh from '../../pages/about/funfact.zh.md?raw'
 import aboutZh from '../../pages/about/zh.md?raw'
 
 type Language = 'en' | 'zh'
@@ -71,7 +75,22 @@ const aboutContent: Record<Language, string> = {
   zh: aboutZh,
 }
 
+const funFactContent: Record<Language, string> = {
+  en: funFactEn,
+  zh: funFactZh,
+}
+
+const creditContent: Record<Language, string> = {
+  en: creditEn,
+  zh: creditZh,
+}
+
+const profilePhotoAlt = computed(() => language.value === 'zh'
+  ? 'Hao Lou 的个人照片'
+  : 'Portrait of Hao Lou')
 const aboutHtml = computed(() => markdown.render(aboutContent[language.value]))
+const funFactHtml = computed(() => markdown.render(funFactContent[language.value]))
+const creditHtml = computed(() => markdown.render(creditContent[language.value]))
 const aboutLang = computed(() => language.value === 'zh' ? 'zh-CN' : 'en')
 
 function setLanguage(value: Language) {
@@ -102,16 +121,35 @@ function setLanguage(value: Language) {
 
     <nav class="about-index" aria-label="About sections">
       <a href="#about-bio">{{ language === 'zh' ? '简介' : 'Bio' }}</a>
+      <a href="#about-fun-fact">{{ language === 'zh' ? '小事实' : 'Fun Fact' }}</a>
       <a href="#about-online">{{ language === 'zh' ? '在线联系' : 'Find Me Online' }}</a>
       <a href="#about-friends">{{ language === 'zh' ? '友链' : 'Friend Links' }}</a>
+      <a href="#about-credit">{{ language === 'zh' ? '鸣谢' : 'Credit' }}</a>
     </nav>
 
-    <section id="about-bio" class="about-section">
+    <div class="about-lead">
+      <div class="about-lead-main">
+        <section id="about-bio" class="about-section">
+          <h2 class="about-section-title">
+            {{ language === 'zh' ? '简介' : 'Bio' }}
+          </h2>
+
+          <div class="about-copy" :lang="aboutLang" v-html="aboutHtml" />
+        </section>
+      </div>
+
+      <figure class="about-portrait">
+        <div class="portrait-frame" role="img" :aria-label="profilePhotoAlt" />
+        <figcaption>Hao Lou / phyll1s0</figcaption>
+      </figure>
+    </div>
+
+    <section id="about-fun-fact" class="about-section about-note">
       <h2 class="about-section-title">
-        {{ language === 'zh' ? '简介' : 'Bio' }}
+        {{ language === 'zh' ? '小事实' : 'Fun Fact' }}
       </h2>
 
-      <div class="about-copy" :lang="aboutLang" v-html="aboutHtml" />
+      <div class="about-copy" :lang="aboutLang" v-html="funFactHtml" />
     </section>
 
     <section id="about-online" class="about-section">
@@ -158,6 +196,14 @@ function setLanguage(value: Language) {
           <span class="link-arrow" aria-hidden="true">→</span>
         </a>
       </div>
+    </section>
+
+    <section id="about-credit" class="about-section about-credit">
+      <h2 class="about-section-title">
+        {{ language === 'zh' ? '鸣谢' : 'Credit' }}
+      </h2>
+
+      <div class="about-copy" :lang="aboutLang" v-html="creditHtml" />
     </section>
   </div>
 </template>
@@ -295,6 +341,13 @@ function setLanguage(value: Language) {
   opacity: 1;
 }
 
+.about-lead {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(9rem, 13rem);
+  align-items: start;
+  gap: 2rem;
+}
+
 .about-section {
   margin-top: 2.25rem;
 }
@@ -310,6 +363,63 @@ function setLanguage(value: Language) {
 
 .about-copy :deep(p:first-child) {
   margin-top: 0;
+}
+
+.about-copy :deep(a) {
+  color: var(--fg-deeper);
+}
+
+.about-portrait {
+  position: sticky;
+  top: 5rem;
+  margin: 0;
+}
+
+.portrait-frame {
+  aspect-ratio: 4 / 5;
+  border: 1px solid rgba(125, 125, 125, 0.24);
+  border-radius: 8px;
+  background-image:
+    url('/images/about/profile.jpg'),
+    repeating-linear-gradient(
+      135deg,
+      rgba(125, 125, 125, 0.08) 0,
+      rgba(125, 125, 125, 0.08) 1px,
+      transparent 1px,
+      transparent 10px
+    );
+  background-position: center;
+  background-size: cover, auto;
+  box-shadow:
+    0 1rem 2.5rem rgba(0, 0, 0, 0.05),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.about-portrait figcaption {
+  margin-top: 0.55rem;
+  color: var(--fg);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  text-align: center;
+  opacity: 0.48;
+}
+
+.about-note {
+  position: relative;
+  border-left: 1px solid rgba(125, 125, 125, 0.25);
+  padding-left: 1rem;
+}
+
+.about-note::before {
+  position: absolute;
+  top: 0.2rem;
+  left: -0.2rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: var(--fg);
+  opacity: 0.28;
+  content: '';
 }
 
 .link-list,
@@ -392,6 +502,11 @@ function setLanguage(value: Language) {
   border-top: 1px solid rgba(125, 125, 125, 0.22);
 }
 
+.about-credit {
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(125, 125, 125, 0.22);
+}
+
 @media (max-width: 640px) {
   .about-language-toggle {
     padding-top: 0.1rem;
@@ -431,6 +546,18 @@ function setLanguage(value: Language) {
 
   .about-index {
     gap: 0.6rem;
+  }
+
+  .about-lead {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+
+  .about-portrait {
+    position: static;
+    order: -1;
+    width: min(11rem, 56vw);
+    margin: 0 auto 0.25rem;
   }
 
   .friend-grid {
