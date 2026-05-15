@@ -158,10 +158,6 @@ function setLanguage(value: Language) {
       </div>
     </section>
 
-    <p class="about-updated">
-      Last updated: May 2026
-    </p>
-
     <section id="about-friends" class="about-section friend-links" aria-label="Friend links">
       <h2 class="about-section-title">
         {{ language === 'zh' ? '友链' : 'Friend Links' }}
@@ -351,13 +347,6 @@ function setLanguage(value: Language) {
 .friend-link:hover .link-arrow {
   opacity: 0.8;
   transform: translateX(0.15rem);
-}
-
-.about-updated {
-  margin-top: 1.75rem;
-  color: var(--fg);
-  font-style: italic;
-  opacity: 0.5;
 }
 
 .friend-links {
