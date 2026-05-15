@@ -20,16 +20,54 @@ const shareSummary = computed(() => frontmatter.description ?? '')
 const tweetUrl = computed(() => `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText.value)}`)
 const elkUrl = computed(() => `https://elk.zone/intent/post?text=${encodeURIComponent(shareText.value)}`)
 const blueskyUrl = computed(() => `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText.value)}`)
-const qqUrl = computed(() => `https://connect.qq.com/widget/shareqq/index.html?${new URLSearchParams({
-  summary: shareSummary.value,
+type CopyStatus = 'idle' | 'copied' | 'failed'
+
+const copyStatus = ref<CopyStatus>('idle')
+let copiedTimer: ReturnType<typeof setTimeout> | undefined
+
+const nativeShareData = computed<ShareData>(() => ({
   title: shareTitle.value,
+  text: shareSummary.value || shareTitle.value,
   url: pageUrl.value,
-})}`)
-const wechatUrl = computed(() => `https://api.qrserver.com/v1/create-qr-code/?${new URLSearchParams({
-  data: pageUrl.value,
-  margin: '16',
-  size: '240x240',
-})}`)
+}))
+
+async function copyPageUrl() {
+  try {
+    if (!navigator.clipboard)
+      throw new Error('Clipboard unavailable')
+
+    await navigator.clipboard.writeText(pageUrl.value)
+    copyStatus.value = 'copied'
+    if (copiedTimer)
+      clearTimeout(copiedTimer)
+    copiedTimer = setTimeout(() => {
+      copyStatus.value = 'idle'
+    }, 1800)
+  }
+  catch {
+    copyStatus.value = 'failed'
+    if (copiedTimer)
+      clearTimeout(copiedTimer)
+    copiedTimer = setTimeout(() => {
+      copyStatus.value = 'idle'
+    }, 1800)
+  }
+}
+
+async function shareNative() {
+  if ('share' in navigator) {
+    try {
+      await navigator.share(nativeShareData.value)
+      return
+    }
+    catch (error) {
+      if (error instanceof DOMException && error.name === 'AbortError')
+        return
+    }
+  }
+
+  await copyPageUrl()
+}
 
 onMounted(() => {
   const navigate = () => {
@@ -218,9 +256,13 @@ const ArtComponent = computed(() => {
       <span op25> / </span>
       <a :href="tweetUrl" target="_blank" op50>twitter</a>
       <span op25> / </span>
-      <a :href="wechatUrl" target="_blank" title="Scan with WeChat" op50>wechat</a>
+      <button type="button" class="share-action" title="Share to WeChat or QQ" op50 @click="shareNative">
+        wechat/qq
+      </button>
       <span op25> / </span>
-      <a :href="qqUrl" target="_blank" op50>qq</a>
+      <button type="button" class="share-action" op50 @click="copyPageUrl">
+        {{ copyStatus === 'copied' ? 'copied' : copyStatus === 'failed' ? 'copy failed' : 'copy link' }}
+      </button>
     </template>
     <br>
     <span font-mono op50>> </span>
@@ -231,3 +273,18 @@ const ArtComponent = computed(() => {
     />
   </div>
 </template>
+
+<style scoped>
+.share-action {
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+
+.share-action:hover {
+  opacity: 0.75;
+}
+</style>
