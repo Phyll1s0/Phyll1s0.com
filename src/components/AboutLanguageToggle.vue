@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import MarkdownIt from 'markdown-it'
-import aboutEn from '~/content/about/en.md?raw'
-import aboutZh from '~/content/about/zh.md?raw'
+import aboutEn from '../../pages/about/en.md?raw'
+import aboutZh from '../../pages/about/zh.md?raw'
 
 type Language = 'en' | 'zh'
 
