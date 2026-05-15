@@ -1,94 +1,20 @@
 ---
 title: About
-description: 关于 Hao Lou / Phyll1s0 的更完整介绍、兴趣与友链
+description: A small personal essay about Hao Lou / Phyll1s0
 ---
 
 # About
 
-> 在代码与生活之间，寻找属于自己的节奏。
+I am **Hao Lou**, also known online as **phyll1s0**. I study Computer Science at Shanghai Jiao Tong University, but that sentence is only the formal entrance to a messier and more interesting room. Most days, I am somewhere between systems, AI, web experiments, games, and the strange little tools that begin as a passing thought and quietly become something I care about.
 
----
+I like making vague ideas survive contact with reality. A project might start as a line in a note, a late-night question, or a small irritation with how existing tools behave. Then comes the part I enjoy most: giving it a shape, watching it break, arguing with the details, and slowly turning it into something that can be used, played with, or at least honestly learned from. Code, for me, is not only a way to solve problems. It is also a way to think in public, to leave traces of curiosity, and to find out what an idea really means after the pretty version in my head has met the compiler.
 
-## 我
+My technical interests tend to orbit **AI** and **systems**. I am fascinated by models and agents because they change the texture of everyday work, but I am just as drawn to the lower layers: compilers, operating systems, networks, performance, and all the machinery that makes software feel solid. I also care about the surface where people actually meet the machine. A good interface has rhythm. A good website has a voice. A good tool should feel like it respects the person using it.
 
-我是 **Hao Lou**（楼灏），网名 **phyll1s0 / 凌灰音**。目前在上海交通大学读计算机，长期在系统、AI、创意编程和各种有趣的小项目之间来回穿梭。
+Outside the terminal, I am not especially eager to become a single-purpose human. I ski when I can, play tennis and billiards, wander through games like _Zenless Zone Zero_, _Hollow Knight_, and CS2, and read whatever catches me, from web novels to philosophy. I like films, music, travel, and long questions that do not become less important just because they refuse to become tidy. Creation, existence, relationships, memory, selfhood: these are not side quests to me. They are part of the same map.
 
-我喜欢把模糊的想法做成真实可运行的东西：有时候是一个网站，有时候是一个游戏原型，有时候是一段底层代码，也有时候只是某个能让自己开心很久的小工具。对我来说，写代码不只是解决问题，也是一种观察世界、表达自己和认识自己的方式。
+This site is my small corner of that map. It holds notes, projects, experiments, and the occasional attempt to write down what I am becoming before the next version of me changes the wording. I believe people are shaped by what they repeatedly do, but also by what they repeatedly return to. For now, I keep returning to building things, asking better questions, and trying to live with enough attention that the work does not flatten the life around it.
 
-如果你刚认识我，可能会觉得我话不算多，有点慢热；熟起来之后会发现我其实很喜欢分享，也很珍惜长期、稳定、认真对待彼此的连接。
+You can find my code and projects on [GitHub](https://github.com/Phyll1s0), lighter updates on [X/Twitter](https://x.com/louhao088), or reach me by [email](mailto:louhao088@gmail.com). A couple of friends' places worth visiting are [norb.space](https://norb.space) and [theunknown.ing](https://theunknown.ing). If you would like to exchange links, send me your site name, URL, and a one-line description.
 
----
-
-## 我在做什么
-
-我主要关注 **AI** 与 **Systems** 相关的方向，也喜欢把技术和创意结合起来做一些不太标准答案的东西。
-
-- **AI 与工具**：关注大模型、Agent、AI 辅助创作，以及如何让工具真正进入日常工作流。
-- **系统与底层**：对编译器、操作系统、网络和性能优化这些更靠近机器的部分保持好奇。
-- **Web 与交互**：喜欢做干净、可用、有一点个人气质的网站和交互体验。
-- **游戏与创意项目**：会把一些奇怪但闪光的点子做成可玩的原型。
-
-完整项目列表可以在 [GitHub](https://github.com/Phyll1s0?tab=repositories) 找到。
-
----
-
-## 我的生活侧
-
-我不是只由代码组成的人。除了学习和项目，我也喜欢运动、游戏、旅行、音乐、电影和一些需要慢慢想清楚的问题。
-
-**运动**
-
-- 滑雪
-- 网球
-- 台球
-
-**游戏**
-
-- 绝区零
-- 空洞骑士
-- CS2
-
-**其他**
-
-- 看书，网文和哲学都会看
-- 看电影，听音乐，旅行
-- 思考一些关于创造、存在、自我和关系的问题
-
----
-
-## 我相信
-
-> "We are what we repeatedly do."
-
-我相信人是在不断重复的行动里长出来的。灵感当然重要，但更重要的是一次次把东西做出来、修好、推翻、重做，然后在这个过程里变得更清楚一点。
-
-我也相信技术应该服务于生活，而不是替代生活。代码是我的工具、语言和游乐场，但不是我的全部定义。
-
----
-
-## 联系我
-
-- Website: [phyll1s0.com](https://phyll1s0.com)
-- GitHub: [Phyll1s0](https://github.com/Phyll1s0)
-- X/Twitter: [louhao088](https://x.com/louhao088)
-- Email: [louhao088@gmail.com](mailto:louhao088@gmail.com)
-
----
-
-## 友链
-
-这里放一些朋友和我喜欢的网站。如果你也想交换友链，可以直接通过邮件或社交平台联系我。
-
-- [norb.space](https://norb.space)
-- [theunknown.ing](https://theunknown.ing)
-
-想交换友链的话，可以带上：
-
-- 网站名称
-- 网站链接
-- 一句话介绍
-- 可选的头像或 logo
-
----
-
-_最后更新：2026年5月_
+_Last updated: May 2026_
