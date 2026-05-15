@@ -350,7 +350,7 @@ function setLanguage(value: Language) {
 
 .about-lead {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(12rem, 16rem);
+  grid-template-columns: minmax(0, 1fr) minmax(12rem, 16.5rem);
   align-items: start;
   gap: 1.8rem;
 }
@@ -383,7 +383,7 @@ function setLanguage(value: Language) {
 }
 
 .portrait-frame {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 999 / 829;
   border: 1px solid rgba(125, 125, 125, 0.24);
   border-radius: 8px;
   background-image:
@@ -621,7 +621,7 @@ function setLanguage(value: Language) {
   .about-portrait {
     position: static;
     order: -1;
-    width: min(18rem, 86vw);
+    width: min(18.5rem, 86vw);
     margin: 0 auto 0.25rem;
   }
 
