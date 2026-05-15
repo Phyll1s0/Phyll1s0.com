@@ -188,6 +188,7 @@ h6:focus .header-anchor {
 }
 
 .table-of-contents-anchor {
+  cursor: pointer;
   --uno: 'mx2 w-7 h-7 text-lg flex items-center justify-center bg-base rounded text-hex-8887 border border-base shadow md:border-transparent md:shadow-none transition duration-400';
 }
 
@@ -199,8 +200,13 @@ h6:focus .header-anchor {
 }
 
 *:hover > .table-of-contents > .table-of-contents-anchor,
+.table-of-contents.toc-open > .table-of-contents-anchor,
 .toc-always-on .table-of-contents > .table-of-contents-anchor {
   --uno: text-inherit;
+}
+
+.table-of-contents.toc-open > ul {
+  opacity: 0.75;
 }
 
 .toc-always-on .table-of-contents > ul {
@@ -223,6 +229,93 @@ h6:focus .header-anchor {
 
 .table-of-contents ul > li > a {
   --uno: op75 hover-op100 transition;
+}
+
+@media (max-width: 640px) {
+  .table-of-contents {
+    top: auto;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    width: auto;
+    max-width: calc(100vw - 2rem);
+    overflow: visible;
+    pointer-events: none;
+  }
+
+  .table-of-contents-anchor {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-radius: 999px;
+    pointer-events: auto;
+    backdrop-filter: blur(12px);
+  }
+
+  .table-of-contents > ul {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    max-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 0.85rem;
+    overflow-y: auto;
+    border: 1px solid rgba(125, 125, 125, 0.24);
+    border-radius: 8px;
+    color: var(--fg);
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      max-height 0.24s ease,
+      margin-bottom 0.24s ease,
+      padding 0.24s ease,
+      opacity 0.18s ease;
+  }
+
+  html.dark .table-of-contents > ul {
+    background: rgba(18, 18, 18, 0.94);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+  }
+
+  .toc-always-on .table-of-contents > ul,
+  *:hover > .table-of-contents > ul {
+    max-height: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .table-of-contents.toc-open {
+    pointer-events: auto;
+  }
+
+  .table-of-contents.toc-open > ul,
+  .toc-always-on .table-of-contents.toc-open > ul,
+  *:hover > .table-of-contents.toc-open > ul {
+    max-height: min(55vh, 24rem);
+    margin-bottom: 0.6rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    opacity: 0.96;
+    pointer-events: auto;
+  }
+
+  .table-of-contents ul > li {
+    padding-left: 0;
+    margin-top: 0.55rem;
+  }
+
+  .table-of-contents ul > li:first-child {
+    margin-top: 0;
+  }
 }
 
 .code-wrap .line {

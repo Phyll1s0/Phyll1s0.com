@@ -80,6 +80,59 @@ onMounted(() => {
     }
   }
 
+  const setupTableOfContents = () => {
+    const tocs = content.value?.querySelectorAll<HTMLElement>('.table-of-contents') ?? []
+
+    tocs.forEach((toc, index) => {
+      const trigger = toc.querySelector<HTMLElement>('.table-of-contents-anchor')
+      const list = toc.querySelector<HTMLElement>('ul')
+      if (!trigger)
+        return
+
+      const listId = list?.id || `post-toc-${index}`
+      if (list)
+        list.id = listId
+
+      const setOpen = (open: boolean) => {
+        toc.classList.toggle('toc-open', open)
+        trigger.setAttribute('aria-expanded', String(open))
+      }
+
+      trigger.setAttribute('role', 'button')
+      trigger.setAttribute('tabindex', '0')
+      trigger.setAttribute('aria-label', 'Toggle table of contents')
+      trigger.setAttribute('aria-expanded', 'false')
+      if (list)
+        trigger.setAttribute('aria-controls', listId)
+
+      useEventListener(trigger, 'click', (event) => {
+        event.preventDefault()
+        setOpen(!toc.classList.contains('toc-open'))
+      })
+
+      useEventListener(trigger, 'keydown', (event: KeyboardEvent) => {
+        if (event.key !== 'Enter' && event.key !== ' ')
+          return
+
+        event.preventDefault()
+        setOpen(!toc.classList.contains('toc-open'))
+      })
+
+      useEventListener(toc, 'click', (event) => {
+        const target = event.target
+        if (target instanceof HTMLElement && target.closest('a'))
+          setOpen(false)
+      })
+
+      useEventListener(document, 'click', (event) => {
+        const target = event.target
+        if (target instanceof Node && !toc.contains(target))
+          setOpen(false)
+      })
+    })
+  }
+
+  setupTableOfContents()
   useEventListener(window, 'hashchange', navigate)
   useEventListener(content.value!, 'click', handleAnchors, { passive: false })
 
