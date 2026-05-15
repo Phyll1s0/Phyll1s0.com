@@ -1,5 +1,9 @@
 [
   {
+    "title": "About",
+    "path": "/about"
+  },
+  {
     "title": "Bookmarks",
     "path": "/bookmarks"
   },
@@ -8,7 +12,7 @@
     "path": "/illustrations"
   },
   {
-    "title": "Hao Lou (楼灏)",
+    "title": "Hao Lou",
     "path": "/index"
   },
   {
