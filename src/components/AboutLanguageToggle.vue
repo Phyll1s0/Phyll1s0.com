@@ -1,7 +1,16 @@
 <script setup lang="ts">
+import MarkdownIt from 'markdown-it'
+import aboutEn from '~/content/about/en.md?raw'
+import aboutZh from '~/content/about/zh.md?raw'
+
 type Language = 'en' | 'zh'
 
 const language = ref<Language>('en')
+const markdown = new MarkdownIt({
+  html: false,
+  linkify: true,
+  typographer: true,
+})
 
 const languageOptions: Array<{
   label: string
@@ -57,6 +66,14 @@ const friendLinks = [
   },
 ]
 
+const aboutContent: Record<Language, string> = {
+  en: aboutEn,
+  zh: aboutZh,
+}
+
+const aboutHtml = computed(() => markdown.render(aboutContent[language.value]))
+const aboutLang = computed(() => language.value === 'zh' ? 'zh-CN' : 'en')
+
 function setLanguage(value: Language) {
   language.value = value
 }
@@ -90,49 +107,7 @@ function setLanguage(value: Language) {
         {{ language === 'zh' ? '简介' : 'Bio' }}
       </h2>
 
-      <section v-show="language === 'en'" class="about-copy" lang="en">
-        <p>
-          I am <strong>Hao Lou</strong>, also known online as <strong>phyll1s0</strong>. I study Computer Science at Shanghai Jiao Tong University, but that sentence is only the formal entrance to a messier and more interesting room. Most days, I am somewhere between systems, AI, web experiments, games, and the strange little tools that begin as a passing thought and quietly become something I care about.
-        </p>
-
-        <p>
-          I like making vague ideas survive contact with reality. A project might start as a line in a note, a late-night question, or a small irritation with how existing tools behave. Then comes the part I enjoy most: giving it a shape, watching it break, arguing with the details, and slowly turning it into something that can be used, played with, or at least honestly learned from. Code, for me, is not only a way to solve problems. It is also a way to think in public, to leave traces of curiosity, and to find out what an idea really means after the pretty version in my head has met the compiler.
-        </p>
-
-        <p>
-          My technical interests tend to orbit <strong>AI</strong> and <strong>systems</strong>. I am fascinated by models and agents because they change the texture of everyday work, but I am just as drawn to the lower layers: compilers, operating systems, networks, performance, and all the machinery that makes software feel solid. I also care about the surface where people actually meet the machine. A good interface has rhythm. A good website has a voice. A good tool should feel like it respects the person using it.
-        </p>
-
-        <p>
-          Outside the terminal, I am not especially eager to become a single-purpose human. I ski when I can, play tennis and billiards, wander through games like <em>Zenless Zone Zero</em>, <em>Hollow Knight</em>, and CS2, and read whatever catches me, from web novels to philosophy. I like films, music, travel, and long questions that do not become less important just because they refuse to become tidy. Creation, existence, relationships, memory, selfhood: these are not side quests to me. They are part of the same map.
-        </p>
-
-        <p>
-          This site is my small corner of that map. It holds notes, projects, experiments, and the occasional attempt to write down what I am becoming before the next version of me changes the wording. I believe people are shaped by what they repeatedly do, but also by what they repeatedly return to. For now, I keep returning to building things, asking better questions, and trying to live with enough attention that the work does not flatten the life around it.
-        </p>
-      </section>
-
-      <section v-show="language === 'zh'" class="about-copy" lang="zh-CN">
-        <p>
-          我是 <strong>Hao Lou</strong>，在互联网上也叫 <strong>phyll1s0</strong>。我在上海交通大学读计算机科学，但这句话更像一扇正式的门，门后面其实要杂乱、有趣得多。大多数时候，我在系统、AI、网页实验、游戏，以及一些从一个念头慢慢长成形状的小工具之间游荡。
-        </p>
-
-        <p>
-          我喜欢让模糊的想法经受现实的碰撞。一个项目可能开始于笔记里的一行字、深夜突然冒出来的问题，或者对某个现有工具的一点不满。真正让我着迷的是后面的过程：给它形状，看它摔坏，和细节争执，再一点点把它变成可以使用、可以玩、或者至少可以诚实地从中学到东西的样子。对我来说，代码不只是解决问题的方式，也是一种公开思考的方式，一种留下好奇心痕迹的方式。
-        </p>
-
-        <p>
-          我的技术兴趣常常围绕着 <strong>AI</strong> 和 <strong>systems</strong> 打转。我对模型和 agents 感兴趣，因为它们正在改变日常工作的质感；同时我也很喜欢更底层的东西：编译器、操作系统、网络、性能，以及所有让软件变得可靠的机械结构。我也在意人真正碰到机器的那一层表面。好的界面有节奏，好的网站有声音，好的工具应该让使用它的人觉得自己被认真对待。
-        </p>
-
-        <p>
-          终端之外，我并不想把自己训练成一个单一用途的人。有机会的时候我会去滑雪，也打网球和台球；我会在 <em>绝区零</em>、<em>Hollow Knight</em>、CS2 这样的游戏里闲逛，也会读网文和哲学。电影、音乐、旅行，还有那些无法被整理得很干净的问题，对我来说都很重要。创造、存在、关系、记忆、自我，这些不是生活的支线任务，而是同一张地图上的不同路径。
-        </p>
-
-        <p>
-          这个网站就是那张地图上的一个小角落。它放着笔记、项目、实验，以及我偶尔试图在下一个版本的自己改掉措辞之前，先把当下正在成为的东西写下来。我相信人会被自己反复做的事情塑造，也会被自己反复回到的东西塑造。现在，我还在反复回到建造、提问，以及尽量认真地生活这几件事上。
-        </p>
-      </section>
+      <div class="about-copy" :lang="aboutLang" v-html="aboutHtml" />
     </section>
 
     <section id="about-online" class="about-section">
@@ -270,7 +245,7 @@ function setLanguage(value: Language) {
   margin-bottom: 0.9rem;
 }
 
-.about-copy p:first-child {
+.about-copy :deep(p:first-child) {
   margin-top: 0;
 }
 
