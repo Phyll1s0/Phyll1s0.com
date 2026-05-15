@@ -79,9 +79,8 @@ description: 关于 Hao Lou / Phyll1s0 的更完整介绍、兴趣与友链
 
 这里放一些朋友和我喜欢的网站。如果你也想交换友链，可以直接通过邮件或社交平台联系我。
 
-- [Phyll1s0 on GitHub](https://github.com/Phyll1s0) - 我的代码、项目和一些正在生长的想法。
-- [Phyll1s0 on X/Twitter](https://x.com/louhao088) - 一些更轻量的动态、碎碎念和技术兴趣。
-- [这个网站的源码](https://github.com/Phyll1s0/Phyll1s0.com) - 如果你也在搭个人主页，可以从这里翻翻结构。
+- [norb.space](https://norb.space)
+- [theunknown.ing](https://theunknown.ing)
 
 想交换友链的话，可以带上：
 
