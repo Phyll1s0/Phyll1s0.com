@@ -11,6 +11,11 @@ const languageOptions: Array<{
   { label: '中文', value: 'zh' },
 ]
 
+const friendLinks = [
+  { label: 'norb.space', url: 'https://norb.space' },
+  { label: 'theunknown.ing', url: 'https://theunknown.ing' },
+]
+
 function setLanguage(value: Language) {
   language.value = value
 }
@@ -54,7 +59,7 @@ function setLanguage(value: Language) {
       </p>
 
       <p>
-        You can find my code and projects on <a href="https://github.com/Phyll1s0" target="_blank" rel="noopener">GitHub</a>, lighter updates on <a href="https://x.com/louhao088" target="_blank" rel="noopener">X/Twitter</a>, or reach me by <a href="mailto:louhao088@gmail.com">email</a>. A couple of friends' places worth visiting are <a href="https://norb.space" target="_blank" rel="noopener">norb.space</a> and <a href="https://theunknown.ing" target="_blank" rel="noopener">theunknown.ing</a>. If you would like to exchange links, send me your site name, URL, and a one-line description.
+        You can find my code and projects on <a href="https://github.com/Phyll1s0" target="_blank" rel="noopener">GitHub</a>, lighter updates on <a href="https://x.com/louhao088" target="_blank" rel="noopener">X/Twitter</a>, or reach me by <a href="mailto:louhao088@gmail.com">email</a>.
       </p>
     </section>
 
@@ -80,13 +85,29 @@ function setLanguage(value: Language) {
       </p>
 
       <p>
-        你可以在 <a href="https://github.com/Phyll1s0" target="_blank" rel="noopener">GitHub</a> 看我的代码和项目，在 <a href="https://x.com/louhao088" target="_blank" rel="noopener">X/Twitter</a> 看到一些更轻的更新，也可以通过 <a href="mailto:louhao088@gmail.com">email</a> 联系我。这里也挂两个朋友的站点：<a href="https://norb.space" target="_blank" rel="noopener">norb.space</a> 和 <a href="https://theunknown.ing" target="_blank" rel="noopener">theunknown.ing</a>。如果你想交换友链，可以把站点名、链接和一句简介发给我。
+        你可以在 <a href="https://github.com/Phyll1s0" target="_blank" rel="noopener">GitHub</a> 看我的代码和项目，在 <a href="https://x.com/louhao088" target="_blank" rel="noopener">X/Twitter</a> 看到一些更轻的更新，也可以通过 <a href="mailto:louhao088@gmail.com">email</a> 联系我。
       </p>
     </section>
 
     <p class="about-updated">
       Last updated: May 2026
     </p>
+
+    <section class="friend-links" aria-label="Friend links">
+      <p class="friend-links-title">
+        {{ language === 'zh' ? '友链：' : 'Friends:' }}
+      </p>
+      <a
+        v-for="friend in friendLinks"
+        :key="friend.url"
+        class="friend-link"
+        :href="friend.url"
+        target="_blank"
+        rel="noopener"
+      >
+        {{ friend.label }}
+      </a>
+    </section>
   </div>
 </template>
 
@@ -151,6 +172,25 @@ function setLanguage(value: Language) {
   color: var(--fg);
   font-style: italic;
   opacity: 0.5;
+}
+
+.friend-links {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(125, 125, 125, 0.22);
+}
+
+.friend-links-title {
+  margin-top: 0;
+  margin-bottom: 0.55rem;
+  color: var(--fg-deep);
+  font-weight: 600;
+}
+
+.friend-link {
+  display: block;
+  width: fit-content;
+  margin-top: 0.35rem;
 }
 
 @media (max-width: 640px) {
