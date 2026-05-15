@@ -15,6 +15,8 @@ You can find my full projects list [here](https://github.com/Phyll1s0?tab=reposi
 
 I write blog posts about tech experiments, creative projects, and things I find interesting.
 
+Learn more about me [here](https://phyll1s0.com/about)
+
 <div flex-auto />
 
 ---
