@@ -1,3 +1,5 @@
-Why `phyll1s0`? It started as a small mutation of “Phyllis”, a name I liked for its soft sound and old-book feeling. I replaced some letters with `1` and `0` because the internet was already crowded, and because a computer science student naming himself with binary digits is only mildly embarrassing.
+Why `phyll1s0`?
 
-The name stuck before I had a better reason. Now it feels like a tiny artifact from an earlier version of me: readable, a little strange, and just technical enough to be mine.
+You might notice that my Chinese internet name, `凌灰音`, borrows its sound from Lin Huiyin, the writer and architect. A smaller hidden branch of that joke is her English name: `Phyllis Whei Yin Lin`.
+
+So `phyll1s0` begins with `phyllis`, taken from that name. The final `0` echoes `ling` (林 / 凌) in Chinese, and the `1` is there partly because a computer science person is allowed one tiny piece of binary-flavored awkwardness. It is not perfectly logical, which is probably why I like it.
