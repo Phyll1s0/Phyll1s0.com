@@ -128,6 +128,11 @@ function setLanguage(value: Language) {
     </nav>
 
     <div class="about-lead">
+      <figure class="about-portrait">
+        <div class="portrait-frame" role="img" :aria-label="profilePhotoAlt" />
+        <figcaption>Hao Lou / phyll1s0</figcaption>
+      </figure>
+
       <div class="about-lead-main">
         <section id="about-bio" class="about-section">
           <h2 class="about-section-title">
@@ -137,11 +142,6 @@ function setLanguage(value: Language) {
           <div class="about-copy" :lang="aboutLang" v-html="aboutHtml" />
         </section>
       </div>
-
-      <figure class="about-portrait">
-        <div class="portrait-frame" role="img" :aria-label="profilePhotoAlt" />
-        <figcaption>Hao Lou / phyll1s0</figcaption>
-      </figure>
     </div>
 
     <section id="about-fun-fact" class="about-section about-note">
@@ -235,35 +235,6 @@ function setLanguage(value: Language) {
   pointer-events: none;
 }
 
-.about-backdrop::before,
-.about-backdrop::after {
-  position: absolute;
-  display: block;
-  content: '';
-}
-
-.about-backdrop::before {
-  right: 0.25rem;
-  bottom: 1.15rem;
-  width: 70%;
-  height: 1px;
-  background: currentColor;
-  box-shadow:
-    0 -2.7rem 0 rgba(125, 125, 125, 0.14),
-    0 -5.4rem 0 rgba(125, 125, 125, 0.1);
-}
-
-.about-backdrop::after {
-  top: 0.4rem;
-  right: 1rem;
-  width: 1px;
-  height: 76%;
-  background: currentColor;
-  box-shadow:
-    -4.2rem 0 0 rgba(125, 125, 125, 0.14),
-    -8.4rem 0 0 rgba(125, 125, 125, 0.1);
-}
-
 .about-backdrop span {
   position: absolute;
   top: 0;
@@ -349,10 +320,7 @@ function setLanguage(value: Language) {
 }
 
 .about-lead {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(12rem, 16.5rem);
-  align-items: start;
-  gap: 1.8rem;
+  display: flow-root;
 }
 
 .about-section {
@@ -377,9 +345,9 @@ function setLanguage(value: Language) {
 }
 
 .about-portrait {
-  position: sticky;
-  top: 5rem;
-  margin: 0;
+  float: right;
+  width: min(23rem, 42%);
+  margin: 0.25rem 0 1.25rem 2.25rem;
 }
 
 .portrait-frame {
@@ -585,22 +553,6 @@ function setLanguage(value: Language) {
     opacity: 0.72;
   }
 
-  .about-backdrop::before {
-    bottom: 0.75rem;
-    width: 58%;
-    box-shadow:
-      0 -2rem 0 rgba(125, 125, 125, 0.12),
-      0 -4rem 0 rgba(125, 125, 125, 0.08);
-  }
-
-  .about-backdrop::after {
-    right: 0.65rem;
-    height: 64%;
-    box-shadow:
-      -3rem 0 0 rgba(125, 125, 125, 0.12),
-      -6rem 0 0 rgba(125, 125, 125, 0.08);
-  }
-
   .about-backdrop span {
     font-size: clamp(3.6rem, 22vw, 6.5rem);
   }
@@ -614,13 +566,11 @@ function setLanguage(value: Language) {
   }
 
   .about-lead {
-    grid-template-columns: 1fr;
-    gap: 1.35rem;
+    display: block;
   }
 
   .about-portrait {
-    position: static;
-    order: -1;
+    float: none;
     width: min(18.5rem, 86vw);
     margin: 0 auto 0.25rem;
   }
