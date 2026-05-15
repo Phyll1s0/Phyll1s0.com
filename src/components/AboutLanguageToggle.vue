@@ -120,18 +120,18 @@ function setLanguage(value: Language) {
     </div>
 
     <nav class="about-index" aria-label="About sections">
-      <a href="#about-bio">{{ language === 'zh' ? '简介' : 'Bio' }}</a>
-      <a href="#about-fun-fact">{{ language === 'zh' ? '小事实' : 'Fun Fact' }}</a>
-      <a href="#about-online">{{ language === 'zh' ? '在线联系' : 'Find Me Online' }}</a>
-      <a href="#about-friends">{{ language === 'zh' ? '友链' : 'Friend Links' }}</a>
-      <a href="#about-credit">{{ language === 'zh' ? '鸣谢' : 'Credit' }}</a>
+      <a href="#about-bio">Bio</a>
+      <a href="#about-fun-fact">Fun Fact</a>
+      <a href="#about-online">Find Me Online</a>
+      <a href="#about-friends">Friend Links</a>
+      <a href="#about-credit">Credit</a>
     </nav>
 
     <div class="about-lead">
       <div class="about-lead-main">
         <section id="about-bio" class="about-section">
           <h2 class="about-section-title">
-            {{ language === 'zh' ? '简介' : 'Bio' }}
+            Bio
           </h2>
 
           <div class="about-copy" :lang="aboutLang" v-html="aboutHtml" />
@@ -146,15 +146,22 @@ function setLanguage(value: Language) {
 
     <section id="about-fun-fact" class="about-section about-note">
       <h2 class="about-section-title">
-        {{ language === 'zh' ? '小事实' : 'Fun Fact' }}
+        Fun Fact
       </h2>
 
-      <div class="about-copy" :lang="aboutLang" v-html="funFactHtml" />
+      <details class="fun-fact-disclosure">
+        <summary>
+          <span>Why phyll1s0?</span>
+          <span class="fun-fact-toggle" aria-hidden="true" />
+        </summary>
+
+        <div class="about-copy fun-fact-answer" :lang="aboutLang" v-html="funFactHtml" />
+      </details>
     </section>
 
     <section id="about-online" class="about-section">
       <h2 class="about-section-title">
-        {{ language === 'zh' ? '在线联系' : 'Find Me Online' }}
+        Find Me Online
       </h2>
 
       <div class="link-list">
@@ -177,7 +184,7 @@ function setLanguage(value: Language) {
 
     <section id="about-friends" class="about-section friend-links" aria-label="Friend links">
       <h2 class="about-section-title">
-        {{ language === 'zh' ? '友链' : 'Friend Links' }}
+        Friend Links
       </h2>
 
       <div class="friend-grid">
@@ -200,7 +207,7 @@ function setLanguage(value: Language) {
 
     <section id="about-credit" class="about-section about-credit">
       <h2 class="about-section-title">
-        {{ language === 'zh' ? '鸣谢' : 'Credit' }}
+        Credit
       </h2>
 
       <div class="about-copy" :lang="aboutLang" v-html="creditHtml" />
@@ -420,6 +427,64 @@ function setLanguage(value: Language) {
   background: var(--fg);
   opacity: 0.28;
   content: '';
+}
+
+.fun-fact-disclosure {
+  color: inherit;
+}
+
+.fun-fact-disclosure summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: fit-content;
+  min-width: min(18rem, 100%);
+  color: var(--fg-deep);
+  font-weight: 600;
+  line-height: 1.35;
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fun-fact-disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+.fun-fact-disclosure summary:hover {
+  color: var(--fg-deeper);
+}
+
+.fun-fact-disclosure summary:focus-visible {
+  outline: 2px solid var(--fg-deeper);
+  outline-offset: 0.25rem;
+}
+
+.fun-fact-toggle {
+  display: inline-grid;
+  flex: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  place-items: center;
+  border: 1px solid rgba(125, 125, 125, 0.28);
+  border-radius: 999px;
+  color: var(--fg);
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.fun-fact-toggle::before {
+  content: '+';
+}
+
+.fun-fact-disclosure[open] .fun-fact-toggle::before {
+  content: '-';
+}
+
+.fun-fact-answer {
+  margin-top: 0.85rem;
 }
 
 .link-list,
