@@ -257,9 +257,15 @@ const ArtComponent = computed(() => {
       <a :href="tweetUrl" target="_blank" op50>twitter</a>
       <br>
       <span font-mono op50>> </span>
-      <span op50>send link via </span>
-      <button type="button" class="share-action" title="Open device share sheet for WeChat or QQ" op50 @click="shareNative">
-        wechat/qq
+      <span op50>share via </span>
+      <button
+        type="button"
+        class="share-action"
+        title="Open the system share sheet for WeChat, QQ, Douyin, Xiaohongshu, and other apps"
+        op50
+        @click="shareNative"
+      >
+        wechat / qq / douyin / xiaohongshu
       </button>
       <span op25> / </span>
       <button type="button" class="share-action" op50 @click="copyPageUrl">
