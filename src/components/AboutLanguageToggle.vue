@@ -53,19 +53,27 @@ const onlineLinks = [
 
 const friendLinks = [
   {
-    label: 'norb',
+    label: 'Norb',
     url: 'https://norb.space',
     detail: {
-      en: 'A friend\'s corner of the web',
-      zh: '朋友在网上的一角',
+      en: 'Ruihang Zhang',
+      zh: 'Ruihang Zhang',
     },
   },
   {
-    label: 'theunkownthing',
+    label: 'The Unknownthing',
     url: 'https://theunknownth.ing',
     detail: {
-      en: 'The About page that inspired this structure',
-      zh: '这次结构参考的 About 页面',
+      en: 'Hanning Wang',
+      zh: 'Hanning Wang',
+    },
+  },
+  {
+    label: 'Coffish',
+    url: 'https://acm.sjtu.edu.cn/~ancker-0/',
+    detail: {
+      en: 'Endi Yu',
+      zh: 'Endi Yu',
     },
   },
 ]
@@ -198,6 +206,7 @@ function setLanguage(value: Language) {
         >
           <span>
             <span class="link-label">{{ friend.label }}</span>
+            <span class="link-detail">{{ friend.detail[language] }}</span>
           </span>
           <span class="link-arrow" aria-hidden="true">→</span>
         </a>
