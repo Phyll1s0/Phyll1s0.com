@@ -20,23 +20,24 @@ const shareSummary = computed(() => frontmatter.description ?? '')
 const tweetUrl = computed(() => `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText.value)}`)
 const elkUrl = computed(() => `https://elk.zone/intent/post?text=${encodeURIComponent(shareText.value)}`)
 const blueskyUrl = computed(() => `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText.value)}`)
-const qqShareUrl = computed(() => {
-  const params = new URLSearchParams({
-    url: pageUrl.value,
-    title: shareTitle.value,
-    summary: shareSummary.value || shareTitle.value,
-  })
+const sharePayload = computed(() => {
+  const lines = [
+    shareTitle.value,
+    shareSummary.value,
+    pageUrl.value,
+  ].filter(Boolean)
 
-  return `https://connect.qq.com/widget/shareqq/index.html?${params.toString()}`
+  return [...new Set(lines)].join('\n\n')
 })
 
 const appShareSchemes = {
   wechat: 'weixin://',
+  qq: 'mqq://',
   douyin: 'snssdk1128://',
   xiaohongshu: 'xhsdiscover://',
 } as const
 
-type AppShareTarget = keyof typeof appShareSchemes | 'qq'
+type AppShareTarget = keyof typeof appShareSchemes
 type CopyStatus = 'idle' | 'copied' | 'failed'
 
 const copyStatus = ref<CopyStatus>('idle')
@@ -48,27 +49,57 @@ const nativeShareData = computed<ShareData>(() => ({
   url: pageUrl.value,
 }))
 
-async function copyPageUrl() {
+function setCopyStatus(status: CopyStatus) {
+  copyStatus.value = status
+  if (copiedTimer)
+    clearTimeout(copiedTimer)
+  copiedTimer = setTimeout(() => {
+    copyStatus.value = 'idle'
+  }, 1800)
+}
+
+async function writeClipboardText(text: string) {
   try {
     if (!navigator.clipboard)
       throw new Error('Clipboard unavailable')
 
-    await navigator.clipboard.writeText(pageUrl.value)
-    copyStatus.value = 'copied'
-    if (copiedTimer)
-      clearTimeout(copiedTimer)
-    copiedTimer = setTimeout(() => {
-      copyStatus.value = 'idle'
-    }, 1800)
+    await navigator.clipboard.writeText(text)
   }
   catch {
-    copyStatus.value = 'failed'
-    if (copiedTimer)
-      clearTimeout(copiedTimer)
-    copiedTimer = setTimeout(() => {
-      copyStatus.value = 'idle'
-    }, 1800)
+    const textarea = document.createElement('textarea')
+    textarea.value = text
+    textarea.setAttribute('readonly', '')
+    textarea.style.position = 'fixed'
+    textarea.style.top = '-9999px'
+    textarea.style.opacity = '0'
+    document.body.append(textarea)
+    textarea.select()
+    const copied = document.execCommand('copy')
+    textarea.remove()
+
+    if (!copied)
+      throw new Error('Copy failed')
   }
+}
+
+async function copyText(text: string) {
+  try {
+    await writeClipboardText(text)
+    setCopyStatus('copied')
+    return true
+  }
+  catch {
+    setCopyStatus('failed')
+    return false
+  }
+}
+
+async function copyPageUrl() {
+  await copyText(pageUrl.value)
+}
+
+async function copyShareInfo() {
+  await copyText(sharePayload.value)
 }
 
 async function shareNative() {
@@ -87,13 +118,7 @@ async function shareNative() {
 }
 
 async function openAppShare(target: AppShareTarget) {
-  await copyPageUrl()
-
-  if (target === 'qq') {
-    window.open(qqShareUrl.value, '_blank', 'noopener,noreferrer')
-    return
-  }
-
+  await copyShareInfo()
   window.location.href = appShareSchemes[target]
 }
 
@@ -299,7 +324,7 @@ const ArtComponent = computed(() => {
       <button
         type="button"
         class="share-action"
-        title="Open QQ share"
+        title="Copy title and link, then try to open QQ"
         op50
         @click="openAppShare('qq')"
       >
