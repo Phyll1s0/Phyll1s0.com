@@ -20,6 +20,23 @@ const shareSummary = computed(() => frontmatter.description ?? '')
 const tweetUrl = computed(() => `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText.value)}`)
 const elkUrl = computed(() => `https://elk.zone/intent/post?text=${encodeURIComponent(shareText.value)}`)
 const blueskyUrl = computed(() => `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText.value)}`)
+const qqShareUrl = computed(() => {
+  const params = new URLSearchParams({
+    url: pageUrl.value,
+    title: shareTitle.value,
+    summary: shareSummary.value || shareTitle.value,
+  })
+
+  return `https://connect.qq.com/widget/shareqq/index.html?${params.toString()}`
+})
+
+const appShareSchemes = {
+  wechat: 'weixin://',
+  douyin: 'snssdk1128://',
+  xiaohongshu: 'xhsdiscover://',
+} as const
+
+type AppShareTarget = keyof typeof appShareSchemes | 'qq'
 type CopyStatus = 'idle' | 'copied' | 'failed'
 
 const copyStatus = ref<CopyStatus>('idle')
@@ -67,6 +84,17 @@ async function shareNative() {
   }
 
   await copyPageUrl()
+}
+
+async function openAppShare(target: AppShareTarget) {
+  await copyPageUrl()
+
+  if (target === 'qq') {
+    window.open(qqShareUrl.value, '_blank', 'noopener,noreferrer')
+    return
+  }
+
+  window.location.href = appShareSchemes[target]
 }
 
 onMounted(() => {
@@ -257,15 +285,49 @@ const ArtComponent = computed(() => {
       <a :href="tweetUrl" target="_blank" op50>twitter</a>
       <br>
       <span font-mono op50>> </span>
-      <span op50>share via </span>
+      <span op50>share to </span>
       <button
         type="button"
         class="share-action"
-        title="Open the system share sheet for WeChat, QQ, Douyin, Xiaohongshu, and other apps"
+        title="Copy the link and try to open WeChat"
         op50
-        @click="shareNative"
+        @click="openAppShare('wechat')"
       >
-        wechat / qq / douyin / xiaohongshu
+        wechat
+      </button>
+      <span op25> / </span>
+      <button
+        type="button"
+        class="share-action"
+        title="Open QQ share"
+        op50
+        @click="openAppShare('qq')"
+      >
+        qq
+      </button>
+      <span op25> / </span>
+      <button
+        type="button"
+        class="share-action"
+        title="Copy the link and try to open Douyin"
+        op50
+        @click="openAppShare('douyin')"
+      >
+        douyin
+      </button>
+      <span op25> / </span>
+      <button
+        type="button"
+        class="share-action"
+        title="Copy the link and try to open Xiaohongshu"
+        op50
+        @click="openAppShare('xiaohongshu')"
+      >
+        xiaohongshu
+      </button>
+      <span op25> / </span>
+      <button type="button" class="share-action" title="Open the system share sheet" op50 @click="shareNative">
+        more apps
       </button>
       <span op25> / </span>
       <button type="button" class="share-action" op50 @click="copyPageUrl">
