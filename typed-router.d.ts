@@ -132,6 +132,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/posts/tomb-and-stars': RouteRecordInfo<
+      '/posts/tomb-and-stars',
+      '/posts/tomb-and-stars',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/presentations': RouteRecordInfo<
       '/presentations',
       '/presentations',
@@ -260,6 +267,12 @@ declare module 'vue-router/auto-routes' {
     'pages/posts/private-diary.md': {
       routes:
         | '/posts/private-diary'
+      views:
+        | never
+    }
+    'pages/posts/tomb-and-stars.md': {
+      routes:
+        | '/posts/tomb-and-stars'
       views:
         | never
     }
