@@ -9,7 +9,7 @@ subtitle: Death first paralyzes Hamlet, then teaches him how to act.
 description: A short literary essay on death consciousness, survival instinct, and action in Shakespeare's Hamlet.
 ---
 
-In _Hamlet_, death is not only the end that waits offstage. It is the pressure that shapes Hamlet's thought, delays his revenge, and finally gives his action its tragic clarity. The conflict between the inevitability of death and the instinctual will to life becomes the central paradox of his inner life.
+In Shakespeare's Hamlet, death is not only the end that waits offstage. It is the pressure that shapes Hamlet's thought, delays his revenge, and finally gives his action its tragic clarity. The conflict between the inevitability of death and the instinctual will to life becomes the central paradox of his inner life.
 
 After his father's murder, his mother's quick remarriage, and the corruption of the Danish court, Hamlet is forced into death consciousness before he is ready for it. That awareness first weakens his capacity to act, but it does not destroy his will to live. Instead, the play traces how these two forces collide, change, and eventually reconcile.
 
@@ -53,7 +53,7 @@ Here, the will to life changes form. Hamlet's body dies, but his desire for life
 
 ## Being-Towards-Death
 
-The tragedy of _Hamlet_ is therefore not only a tale of hesitation. It is a drama of permanent tension between an extreme sense of death and an instinctive will to life. Hamlet's journey resembles Martin Heidegger's idea of "Being-towards-death" (_Sein zum Tode_): the awareness of mortality does not have to lead to nihilism, but can become the condition for authentic action.
+Hamlet's tragedy is therefore not only a tale of hesitation. It is a drama of permanent tension between an extreme sense of death and an instinctive will to life. His journey resembles Martin Heidegger's idea of "Being-towards-death" (Sein zum Tode): the awareness of mortality does not have to lead to nihilism, but can become the condition for authentic action.
 
 Hamlet begins with a wish for physical dissolution. He ends with a clear readiness to face mortality and act inside it. This awareness relieves his paralysis, renews his will, and turns his final submission to fate into something more than defeat.
 
