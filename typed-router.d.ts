@@ -104,6 +104,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/posts/being-towards-death-hamlet': RouteRecordInfo<
+      '/posts/being-towards-death-hamlet',
+      '/posts/being-towards-death-hamlet',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/posts/find-enough-in-many-worlds': RouteRecordInfo<
       '/posts/find-enough-in-many-worlds',
       '/posts/find-enough-in-many-worlds',
@@ -229,6 +236,12 @@ declare module 'vue-router/auto-routes' {
     'pages/posts/ai-tools-guide-2026.md': {
       routes:
         | '/posts/ai-tools-guide-2026'
+      views:
+        | never
+    }
+    'pages/posts/being-towards-death-hamlet.md': {
+      routes:
+        | '/posts/being-towards-death-hamlet'
       views:
         | never
     }

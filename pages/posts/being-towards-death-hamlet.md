@@ -1,0 +1,73 @@
+---
+title: '"Being-Towards-Death": Hamlet and the Will to Life'
+date: 2026-06-09
+type: blog
+lang: en
+duration: 6min
+description: A short literary essay on death consciousness, survival instinct, and action in Shakespeare's Hamlet.
+---
+
+Original essay title: **"Being-Towards-Death": The Conflict Between Death Consciousness and the Will to Life in _Hamlet_**
+
+The conflict between the inevitability of death and the instinctual will to life is an eternal paradox that defines the human condition. In Shakespeare's tragedy, this conflict is vividly exhibited by the main protagonist, Hamlet, who is suddenly thrown into an existential crisis following the murder of his father, the quick remarriage of his mother, and the widespread corruption within the Danish court.
+
+These heavy traumas prematurely force upon him a strong consciousness of death, severely challenging his natural will to endure and fight back. This essay argues that the internal conflict between Hamlet's acute death consciousness and his persistent will to life initially paralyzes his ability to act, but eventually empowers him to execute his revenge once he reconciles the two forces.
+
+---
+
+## Death as Escape
+
+At the beginning of the play, Hamlet's death consciousness is driven by deep grief, so he sees death as a means of escape from his suffering reality. This is clearly expressed in Act 1, Scene 2. Overwhelmed by his father's sudden death and his mother's recent marriage, Hamlet pleads:
+
+> "O, that this too too solid flesh would melt, / Thaw, and resolve itself into a dew!" (1.2.129-130)
+
+To Hamlet, death in the beginning of the play is not a heroic sacrifice but rather a passive wish to melt and disappear from a world that he cannot bear. But this wish to welcome death is always contradicted by his will to live on.
+
+This inner conflict becomes explicit in his famous soliloquy in Act 3, Scene 1 when Hamlet fondly muses:
+
+> "To be, or not to be, that is the question" (3.1.56)
+
+Here, he compares death to a peaceful sleep, yet he is hesitant to commit suicide because of "the dread of something after death" (3.1.78). This dread of the unknown is not cowardice at all; rather, it is the raw drive of survival that lies somewhere deep down in his mind. His will to live is fear, which tugs him back from the edge of self-destruction.
+
+---
+
+## Death Made Physical
+
+While Hamlet initially flees from life in the early acts, his death consciousness undergoes a startling turnaround in Act 5, Scene 1, shifting from abstract philosophizing to facing death in its concrete physicality.
+
+Holding in his hand the cold skull of Yorick, a sudden flash of insight bursts like lightning in Hamlet's mind: death is a leveler of men. Looking at the bone, he muses on how:
+
+> "Imperial Caesar, dead and turn'd to clay, / Might stop a hole to keep the wind away" (5.1.236-237)
+
+In this crucial scene, Hamlet's narrow escape from the King's execution plot in England has given him a much deeper insight into death. Hamlet no longer fears death as an unknown beast; he sees death as a natural, material process in which kings and fools turn back to dust. By stripping death of its terrifying mystery, Hamlet successfully liberates himself from his previous existential dread.
+
+---
+
+## Readiness and the Will to Life
+
+In the final scene of the play, Hamlet's matured death consciousness finally sparks a powerful awakening of his will to life. In Act 5, Scene 2, Hamlet fully reconciles with the inevitability of death; he no longer fears death, but acquires the courage to meet his destiny.
+
+Facing the rigged duel, he puts all hesitations aside and leaves his fate to fate itself. Calmly, he declares:
+
+> "There's a special providence in the fall of a sparrow... the readiness is all" (5.2.230-234)
+
+Hamlet's acknowledgement of death, far from making him passive, instead inspires his will to action. At this tragic climax, when he perceives his own lethal condition, he does not sink to despair as he did before; instead, he bursts out with a furious, bold force to execute his long-delayed revenge on the King.
+
+Furthermore, even though Hamlet has seen through the ruse of life to the end, he does not underestimate the sacredness of life. He heroically stops his faithful friend, Horatio, from committing suicide, ordering him to live in this hard world "to tell my story" (5.2.360). In this final blessing, Hamlet's survival instinct undergoes its final metamorphosis: as his fleshly body dies, his will to life turns into his lifetime totem in spirit.
+
+---
+
+## Conclusion
+
+In conclusion, the tragedy of _Hamlet_ is fundamentally a profound drama of the permanent tension between an extreme sense of death and an instinctive will to life. It is not a tale of hesitation, but Hamlet's soul journey epitomizes Martin Heidegger's philosophy of "Being-towards-death" (_Sein zum Tode_).
+
+Hamlet, by making the change from a pure wish for physical dissolution into a clear will to struggle with man's mortality in the grave, no longer has any fear for the unknown. It is just this clear awareness of the inevitability of death that relieves his paralysis of indecision and rejuvenates his supreme will to action.
+
+So, in his last submission to fate, we see that understanding of mortality is not a surrender to nihilism, but the very key to real existence. Though his physical body expires, by facing his end with courage, Hamlet successfully turns his finite survival into an immortal cultural symbol.
+
+---
+
+## References
+
+- Heidegger, M. (1962). _Being and time_ (J. Macquarrie & E. Robinson, Trans.). Harper & Row.
+- Shakespeare, W. (1998). _Hamlet, prince of Denmark_ (W. G. Clark & W. A. Wrigth, Eds.). University of Virginia Library Electronic Text Center. (Original work published 1866).
