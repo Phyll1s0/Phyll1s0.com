@@ -4,6 +4,7 @@ export interface Post {
   place?: string
   date: string
   lang?: string
+  category?: 'academic' | 'life'
   desc?: string
   platform?: string
   duration?: string

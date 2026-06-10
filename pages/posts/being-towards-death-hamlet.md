@@ -2,6 +2,7 @@
 title: '"Being-Towards-Death": The Conflict Between Death Consciousness and the Will to Life in Hamlet'
 date: 2026-06-09
 type: blog
+category: academic
 lang: en
 art: plum
 duration: 5min

@@ -1,6 +1,7 @@
 ---
 title: 私人日记
 date: 2026-04-30
+category: life
 private: true
 ---
 

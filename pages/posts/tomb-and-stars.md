@@ -2,6 +2,7 @@
 title: 墓地与星空：从《哈姆雷特》看死亡意识与生命意志
 date: 2026-06-02
 type: presentation
+category: academic
 lang: ch
 art: plum
 duration: 25min

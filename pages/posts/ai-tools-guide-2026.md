@@ -2,6 +2,7 @@
 title: My AI Toolkit - A CS Student's Practical Guide
 date: 2026-05-07
 type: blog
+category: academic
 lang: en
 tocAlwaysOn: true
 duration: 10min

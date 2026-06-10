@@ -1,6 +1,7 @@
 ---
 title: Hello World — My New Blog
 publish: true
+category: life
 lang: en
 date: 2026-04-22
 description: Kicking off my personal blog to share thoughts on tech, creative projects, and life.

@@ -2,6 +2,7 @@ import dayjs from 'dayjs'
 
 export const isDark = useDark()
 export const englishOnly = useLocalStorage('phyll1s0-english-only', false)
+export const contentCategory = useLocalStorage<'all' | 'academic' | 'life'>('phyll1s0-content-category', 'all')
 export const galleryView = useLocalStorage<'cover' | 'contain'>('phyll1s0-gallery-view', 'cover')
 
 /**

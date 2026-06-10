@@ -1,13 +1,18 @@
 <script setup lang="ts">
 import type { Post } from '~/types'
 import { useRouter } from 'vue-router/auto'
-import { englishOnly, formatDate } from '~/logics'
+import { contentCategory, englishOnly, formatDate } from '~/logics'
 
 const props = defineProps<{
   type?: string
   posts?: Post[]
   extra?: Post[]
 }>()
+
+const postCategoryLabels = {
+  academic: 'Academic',
+  life: 'Life',
+} as const
 
 const router = useRouter()
 const routes: Post[] = router.getRoutes()
@@ -18,6 +23,7 @@ const routes: Post[] = router.getRoutes()
     title: i.meta.frontmatter.title,
     date: i.meta.frontmatter.date,
     lang: i.meta.frontmatter.lang,
+    category: i.meta.frontmatter.category,
     duration: i.meta.frontmatter.duration,
     recording: i.meta.frontmatter.recording,
     upcoming: i.meta.frontmatter.upcoming,
@@ -28,7 +34,8 @@ const routes: Post[] = router.getRoutes()
 const posts = computed(() =>
   [...(props.posts || routes), ...props.extra || []]
     .sort((a, b) => +new Date(b.date) - +new Date(a.date))
-    .filter(i => !englishOnly.value || !i.lang || i.lang === 'en'),
+    .filter(i => !englishOnly.value || !i.lang || i.lang === 'en')
+    .filter(i => contentCategory.value === 'all' || i.category === contentCategory.value),
 )
 
 const getYear = (a: Date | string | number) => new Date(a).getFullYear()
@@ -97,6 +104,11 @@ function getGroupName(p: Post) {
                 class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--15 mr2 my-auto hidden md:block"
               >日本語</span>
               <span align-middle>{{ route.title }}</span>
+              <span
+                v-if="route.category"
+                align-middle flex-none
+                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 my-auto"
+              >{{ postCategoryLabels[route.category] }}</span>
               <span
                 v-if="route.redirect"
                 align-middle op50 flex-none text-xs ml--1.5

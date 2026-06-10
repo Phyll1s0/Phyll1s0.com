@@ -2,14 +2,15 @@
 title: Find Enough in the Many Worlds
 date: 2025-12-13
 type: presentation
+category: academic
 lang: ch
 art: plum
 duration: 10min
 ---
+
 [[toc]]
 
 > 在多重宇宙里寻找足够
-
 
 ---
 
