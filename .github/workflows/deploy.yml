@@ -24,10 +24,19 @@ jobs:
       NODE_ENV: production
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
-      - name: Checkout
+      - name: Checkout personal site
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          path: site
+
+      - name: Checkout RangeCraft poker trainer
+        uses: actions/checkout@v4
+        with:
+          repository: Phyll1s0/poker
+          ref: main
+          path: poker-source
+          persist-credentials: false
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
@@ -40,12 +49,27 @@ jobs:
         with:
           node-version: 24
           cache: pnpm
+          cache-dependency-path: site/pnpm-lock.yaml
 
       - name: Install dependencies
+        working-directory: site
         run: pnpm install --frozen-lockfile
 
       - name: Build
+        working-directory: site
         run: pnpm run build
+
+      - name: Build RangeCraft at /poker
+        run: |
+          npm ci --include=dev --prefix poker-source
+          npm run build:pages --prefix poker-source
+          rm -rf site/dist/poker
+          mkdir -p site/dist/poker
+          cp -R poker-source/dist-pages/. site/dist/poker/
+          test -f site/dist/poker/index.html
+          test -f site/dist/poker/sw.js
+          test "$(cat site/dist/CNAME)" = "phyll1s0.com"
+          grep -q '/poker/assets/' site/dist/poker/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -53,7 +77,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./site/dist
 
       - name: Deploy to GitHub Pages
         id: deployment
