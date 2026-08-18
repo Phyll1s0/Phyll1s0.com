@@ -53,6 +53,14 @@ const onlineLinks = [
 
 const friendLinks = [
   {
+    label: 'Yu Feng',
+    url: 'https://yufenguofr.github.io/',
+    detail: {
+      en: 'Advisor · SJTU',
+      zh: '冯宇老师 · 上海交通大学',
+    },
+  },
+  {
     label: 'Norb',
     url: 'https://norb.space',
     detail: {
@@ -359,7 +367,7 @@ function setLanguage(value: Language) {
 }
 
 .portrait-frame {
-  aspect-ratio: 999 / 829;
+  aspect-ratio: 3 / 4;
   border: 1px solid rgba(125, 125, 125, 0.24);
   border-radius: 8px;
   background-image:
