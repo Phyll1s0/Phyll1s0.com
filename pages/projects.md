@@ -6,6 +6,10 @@ wrapperClass: 'text-center'
 art: dots
 projects:
   Featured:
+    - name: 'RangeCraft'
+      link: 'https://github.com/Phyll1s0/poker'
+      desc: 'A Texas Hold’em training room with mixed-frequency AI, guided single-hand practice, full-session reports, and private multiplayer tables.'
+      icon: 'i-carbon-game-console'
     - name: 'Ski Knight'
       link: 'https://github.com/Phyll1s0/ski-knight'
       desc: 'A skiing adventure game built with passion. Navigate snowy slopes, dodge obstacles, and chase high scores in this winter-themed arcade experience.'
