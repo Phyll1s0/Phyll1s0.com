@@ -69,7 +69,7 @@ jobs:
           test -f site/dist/poker/index.html
           test -f site/dist/poker/sw.js
           test "$(cat site/dist/CNAME)" = "phyll1s0.com"
-          grep -q '/poker/assets/' site/dist/poker/index.html
+          grep -Eq '(\./|/poker/)assets/' site/dist/poker/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
